@@ -36,62 +36,59 @@
 		<tbody><tr style="font-weight: bold;">
 			<td>序号</td>
 			<td>商品名称</td>
-			<td>库存</td>
 			<td>价格</td>
-			<td>图片</td>
-			<td>缩略图</td>
-			<td>品牌</td>
-			<td>创建时间</td>
+			<td>种别</td>
+			<td>上架时间</td>
+			<td>下架时间</td>
+			<td>变更时间</td>
+			<td>点击次数</td>
+			<td>折扣信息</td>
+			<td>介绍1</td>
+			<td>介绍2</td>
+			<td>介绍3</td>
+			<td>介绍4</td>
+			<td>介绍5</td>
+			<td>热门商品</td>
+			<td>是否显示</td>
+			<td>排序</td>
 			<td align="center">操作</td>
 		</tr>
-		<tr id="product1">
-			<td>1</td>
-			<td><a href="#">苹果（APPLE）iPhone 4S</a></td>
-			<td>100</td>
-			<td>3888</td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174034-58977.jpg" height="60" width="60"></td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174034-97960.jpg" height="40" width="40"></td>
-			<td>苹果apple</td>
-			<td>2012-10-18 17:40:34</td>
-			<td><a href="./index.php?r=commodity/update">修改</a></td>
-			<td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
-		</tr>
-		<tr id="product2">
-			<td>2</td>
-			<td><a href="#">苹果（APPLE）iPhone 4</a></td>
-			<td>100</td>
-			<td>3100</td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174248-28718.jpg" height="60" width="60"></td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174248-87501.jpg" height="40" width="40"></td>
-			<td>苹果apple</td>
-			<td>2012-10-18 17:42:48</td>
-			<td><a href="./index.php?r=commodity/update">修改</a></td>
-			<td><a href="javascript:;" onclick="delete_product(2)">删除</a></td>
-		</tr>
-		<tr id="product3">
-			<td>3</td>
-			<td><a href="#">苹果（APPLE）iPhone 4 8G版</a></td>
-			<td>100</td>
-			<td>1290</td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174346-31424.jpg" height="60" width="60"></td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174346-54660.jpg" height="40" width="40"></td>
-			<td>苹果apple</td>
-			<td>2012-10-18 17:43:46</td>
-			<td><a href="./index.php?r=commodity/update">修改</a></td>
-			<td><a href="javascript:;" onclick="delete_product(3)">删除</a></td>
-		</tr>
-		<tr id="product4">
-			<td>4</td>
-			<td><a href="#">苹果（APPLE）iPhone 4S 16G版</a></td>
-			<td>100</td>
-			<td>987</td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174455-91962.jpg" height="60" width="60"></td>
-			<td><img src="<?php echo BACK_IMG_URL; ?>20121018-174455-10118.jpg" height="40" width="40"></td>
-			<td>苹果apple</td>
-			<td>2012-10-18 17:44:30</td>
-			<td><a href="./index.php?r=commodity/update" >修改</a></td>
-			<td><a href="#" >删除</a></td>
-		</tr>
+		<?php
+		$increment = 1;
+		foreach ($commodity_info as $_v) {
+		?>
+			<tr id="product1">
+				<td><?php echo $increment ?></td>
+				<td><a href="#"><?php echo $_v->comm_name; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_price; ?></a></td>
+				<td><a href="#"><?php
+									if($_v->comm_kind == 1) {
+										echo "服务";
+									}
+									else{
+										echo "产品";
+									}
+									?></a></td>
+				<td><a href="#"><?php echo $_v->comm_on_shelve_time; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_off_shelve_time; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_update_time; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_check_times; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_discount; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_intro1; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_intro2; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_intro3; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_intro4; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_intro5; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_is_hot; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_is_show; ?></a></td>
+				<td><a href="#"><?php echo $_v->comm_sort_order; ?></a></td>
+				<td><a href="./index.php?r=commodity/update">修改</a></td>
+				<td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
+			</tr>
+		<?php
+			$increment++;
+		}
+		?>
 		<tr>
 			<td colspan="20" style="text-align: center;">
 				[1]

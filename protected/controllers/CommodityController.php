@@ -12,15 +12,16 @@ class CommodityController extends Controller
 	 */
 	public function actionShow()
 	{
-		$this->renderPartial('show');
-
 		//通过模型来实现数据表信息查询
 		//产生模型对象
 		$commodity_model = Commodity::model();
 		//通过模型对象调用相关方法查询数据
-		$commodity_info = $commodity_model->find();
-		echo $commodity_info->comm_name;
+		$commodity_info = $commodity_model->findAll();
+		//echo $commodity_info->comm_name;
 		//var_dump($commodity_info);
+
+		//传递到视图
+		$this->renderPartial('show',array('commodity_info'=>$commodity_info));
 	}
 
 	/**
