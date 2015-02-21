@@ -60,28 +60,28 @@
 			<tr id="product1">
 				<td><?php echo $increment ?></td>
 				<td><a href="#"><?php echo $_v->comm_name; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_price; ?></a></td>
-				<td><a href="#"><?php
-									if($_v->comm_kind == 1) {
-										echo "服务";
-									}
-									else{
-										echo "产品";
-									}
-									?></a></td>
-				<td><a href="#"><?php echo $_v->comm_on_shelve_time; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_off_shelve_time; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_update_time; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_check_times; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_discount; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_intro1; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_intro2; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_intro3; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_intro4; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_intro5; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_is_hot; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_is_show; ?></a></td>
-				<td><a href="#"><?php echo $_v->comm_sort_order; ?></a></td>
+				<td><?php echo $_v->comm_price; ?></a></td>
+				<td><?php
+						if($_v->comm_kind == 1) {
+							echo "服务";
+						}
+						else{
+							echo "产品";
+						}
+						?></a></td>
+				<td><?php echo $_v->comm_on_shelve_time; ?></a></td>
+				<td><?php echo $_v->comm_off_shelve_time; ?></a></td>
+				<td><?php echo $_v->comm_update_time; ?></a></td>
+				<td><?php echo $_v->comm_check_times; ?></a></td>
+				<td><?php echo $_v->comm_discount; ?></a></td>
+				<td><?php echo $_v->comm_intro1; ?></a></td>
+				<td><?php echo $_v->comm_intro2; ?></a></td>
+				<td><?php echo $_v->comm_intro3; ?></a></td>
+				<td><?php echo $_v->comm_intro4; ?></a></td>
+				<td><?php echo $_v->comm_intro5; ?></a></td>
+				<td><?php echo $_v->comm_is_hot; ?></a></td>
+				<td><?php echo $_v->comm_is_show; ?></a></td>
+				<td><?php echo $_v->comm_sort_order; ?></a></td>
 				<td><a href="./index.php?r=commodity/update">修改</a></td>
 				<td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
 			</tr>
