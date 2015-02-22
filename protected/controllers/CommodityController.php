@@ -30,7 +30,8 @@ class CommodityController extends Controller
 	 */
 	public function actionAdd()
 	{
-		$this->renderPartial('add');
+		$commodity_model = new Commodity();
+		$this->renderPartial('add',array('commodity_model'=>$commodity_model));
 	}
 
 	/**
@@ -40,5 +41,23 @@ class CommodityController extends Controller
 	public function actionUpdate()
 	{
 		$this->renderPartial('Update');
+	}
+
+	/**
+	 * 通过模型实现数据添加
+	 */
+	public function actionJia()
+	{
+		//1 创建模型对象
+		$commodity_model = new Commodity();
+		//2 为对象丰富属性
+		$commodity_model->comm_name = "aaaa";
+		//3 调用save()方法实现数据添加
+		if( $commodity_model->save() ){
+			echo "success";
+		}
+		else{
+			echo "fail";
+		}
 	}
 }

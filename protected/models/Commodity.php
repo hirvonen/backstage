@@ -24,4 +24,26 @@ class Commodity extends CActiveRecord
 	{
 		return '{{commodity}}';
 	}
+
+	public function attributeLabels()
+	{
+		return array(
+			'comm_name'=>'商品名称',
+			'comm_price'=>'商品价格',
+			'comm_kind'=>'商品种别',
+			'comm_on_shelve_time'=>'上架时间',
+			'comm_off_shelve_time'=>'下架时间',
+			'comm_update_time'=>'更新时间',
+			'comm_check_times'=>'被查看次数',
+			'comm_discount'=>'折扣价格',
+			'comm_intro1'=>'商品介绍1',
+			'comm_intro2'=>'商品介绍2',
+			'comm_intro3'=>'商品介绍3',
+			'comm_intro4'=>'商品介绍4',
+			'comm_intro5'=>'商品介绍5',
+			'comm_is_hot'=>'热门商品',
+			'comm_is_show'=>'商品显示',
+			'comm_sort_order'=>'顺序',
+		);
+	}
 }

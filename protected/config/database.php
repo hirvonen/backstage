@@ -12,4 +12,5 @@ return array(
 	//'password' => 'Cccc1111',
 	'charset' => 'utf8',
 	'tablePrefix' => 'tbl_',    //设置数据表的前缀
+	'enableParamLogging' => true,   //设置sql语句绑定的参数信息
 );

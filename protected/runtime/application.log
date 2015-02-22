@@ -76,3 +76,97 @@ Stack trace:
 REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
 in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (19)
 in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 00:22:48 [error] [exception.CException] exception 'CException' with message 'CommodityController and its behaviors do not have a method or closure named "beginWeidgt".' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(22): CComponent->__call('beginWeidgt', Array)
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(22): CommodityController->beginWeidgt('CActiveForm')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', NULL, true)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', NULL, true)
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(33): CController->renderPartial('add')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/show
+---
+2015/02/23 00:37:31 [error] [php] Missing argument 2 for CActiveForm::label(), called in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php on line 26 and defined (/Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php:583)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(34): CommodityController->renderPartial()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php (26)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (34)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 01:10:55 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "redioButton".' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(133): CComponent->__call('redioButton', Array)
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(133): CActiveForm->redioButton(Object(Commodity), 'comm_is_hot', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(34): CController->renderPartial('add', Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+---
+2015/02/23 01:11:45 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "redioButton".' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(133): CComponent->__call('redioButton', Array)
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(133): CActiveForm->redioButton(Object(Commodity), 'comm_is_hot')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(34): CController->renderPartial('add', Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+---
+2015/02/23 01:11:46 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "redioButton".' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(133): CComponent->__call('redioButton', Array)
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(133): CActiveForm->redioButton(Object(Commodity), 'comm_is_hot')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(34): CController->renderPartial('add', Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+---
