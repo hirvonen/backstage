@@ -170,3 +170,154 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
 ---
+2015/02/23 17:38:07 [error] [php] Array to string conversion (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:62)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (62)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 17:38:55 [error] [php] Array to string conversion (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:62)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (62)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 18:17:35 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:55) (/Users/alfredzhang/Sites/yii_learn/framework/web/CHttpRequest.php:860)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(56): CommodityController->redirect()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (56)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 18:34:49 [error] [php] Undefined index: Commodity (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:32)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (32)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 18:36:10 [error] [php] Undefined index: Commodity (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:32)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (32)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 18:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update ".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('update ')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update ')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/updat...')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/update%20&%20id=10001
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/show
+---
+2015/02/23 18:46:36 [error] [php] Object of class Commodity could not be converted to string (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:81)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/update&id=10029
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (81)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/23 23:22:55 [error] [php] Undefined variable: commodity_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/Update.php:26)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(81): CommodityController->renderPartial()
+#2 unknown(0): CommodityController->actionUpdate()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/update&id=10000
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/Update.php (26)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (81)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/24 00:08:42 [error] [php] Undefined variable: comm_is_show (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:77)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/update&id=10029
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (77)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/24 00:11:31 [error] [php] Undefined variable: comm_is_show (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:51)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (51)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/24 00:37:26 [error] [php] Undefined variable: comm_is_show (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php:25)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(22): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionShow()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php (25)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (22)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/24 00:56:39 [error] [php] Undefined index: comm_is_show (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:21)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (21)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)

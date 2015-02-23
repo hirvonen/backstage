@@ -22,27 +22,39 @@
 <div></div>
 <div class="div_search">
             <span>
-                <form action="#" method="get">
-	                品牌<select name="s_product_mark" style="width: 100px;">
+                <?php $form = $this->beginWidget('CActiveForm'); ?>
+	                显示<select name="comm_is_show" style="width: 100px;">
+		                <option selected="selected" value="2">请选择</option>
+		                <option value="1">显示</option>
+		                <option value="0">未显示</option>
+	                </select>
+	                种别<select name="comm_kind" style="width: 100px;">
 		                <option selected="selected" value="0">请选择</option>
-		                <option value="1">苹果apple</option>
+		                <option value="1">服务</option>
+		                <option value="2">商品</option>
+	                </select>
+	                热门<select name="comm_is_hot" style="width: 100px;">
+		                <option selected="selected" value="2">请选择</option>
+		                <option value="1">热门</option>
+		                <option value="0">非热门</option>
 	                </select>
 	                <input value="查询" type="submit" />
-                </form>
+	            <?php $this->endWidget(); ?>
             </span>
 </div>
 <div style="font-size: 13px; margin: 10px 5px;">
 	<table class="table_a" border="1" width="100%">
 		<tbody><tr style="font-weight: bold;">
-			<td>序号</td>
+			<td align="center">操作</td>
+			<td>商品编号</td>
+			<td>种别</td>
 			<td>商品名称</td>
 			<td>价格</td>
-			<td>种别</td>
+			<td>折扣价格</td>
 			<td>上架时间</td>
 			<td>下架时间</td>
 			<td>变更时间</td>
 			<td>点击次数</td>
-			<td>折扣信息</td>
 			<td>介绍1</td>
 			<td>介绍2</td>
 			<td>介绍3</td>
@@ -51,42 +63,53 @@
 			<td>热门商品</td>
 			<td>是否显示</td>
 			<td>排序</td>
-			<td align="center">操作</td>
 		</tr>
 		<?php
-		$increment = 1;
 		foreach ($commodity_info as $_v) {
 		?>
 			<tr id="product1">
-				<td><?php echo $increment ?></td>
+				<td><a href="./index.php?r=commodity/update&id=<?php echo $_v->pk_comm_id ?>">修改</a></td>
+				<td><?php echo $_v->pk_comm_id ?></td>
+				<td><?php
+					if($_v->comm_kind == 1) {
+						echo "服务";
+					}
+					else{
+						echo "产品";
+					}
+					?></a></td>
 				<td><a href="#"><?php echo $_v->comm_name; ?></a></td>
 				<td><?php echo $_v->comm_price; ?></a></td>
-				<td><?php
-						if($_v->comm_kind == 1) {
-							echo "服务";
-						}
-						else{
-							echo "产品";
-						}
-						?></a></td>
+				<td><?php echo $_v->comm_discount; ?></a></td>
 				<td><?php echo $_v->comm_on_shelve_time; ?></a></td>
 				<td><?php echo $_v->comm_off_shelve_time; ?></a></td>
 				<td><?php echo $_v->comm_update_time; ?></a></td>
 				<td><?php echo $_v->comm_check_times; ?></a></td>
-				<td><?php echo $_v->comm_discount; ?></a></td>
 				<td><?php echo $_v->comm_intro1; ?></a></td>
 				<td><?php echo $_v->comm_intro2; ?></a></td>
 				<td><?php echo $_v->comm_intro3; ?></a></td>
 				<td><?php echo $_v->comm_intro4; ?></a></td>
 				<td><?php echo $_v->comm_intro5; ?></a></td>
-				<td><?php echo $_v->comm_is_hot; ?></a></td>
-				<td><?php echo $_v->comm_is_show; ?></a></td>
+				<td><?php
+						if($_v->comm_is_hot == 1) {
+							echo "是";
+						}
+						else{
+							echo "否";
+						}
+					?></a></td>
+				<td><?php
+						if($_v->comm_is_show == 1) {
+							echo "是";
+						}
+						else{
+							echo "否";
+						}
+					?></a></td>
 				<td><?php echo $_v->comm_sort_order; ?></a></td>
-				<td><a href="./index.php?r=commodity/update">修改</a></td>
-				<td><a href="javascript:;" onclick="delete_product(1)">删除</a></td>
+				<td><a href="./index.php?r=commodity/del&id=<?php echo $_v->pk_comm_id ?>">删除</a></td>
 			</tr>
 		<?php
-			$increment++;
 		}
 		?>
 		<tr>

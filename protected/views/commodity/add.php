@@ -23,6 +23,14 @@
 		<table border="1" width="100%" class="table_a">
 			<tr>
 				<td>
+					<?php echo $form->label($commodity_model, 'comm_kind'); ?>
+				</td>
+				<td>
+					<?php echo $form->dropDownList($commodity_model,'comm_kind',array('服务','商品')); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<?php echo $form->label($commodity_model, 'comm_name'); ?>
 				</td>
 				<td>
@@ -35,46 +43,6 @@
 				</td>
 				<td>
 					<?php echo $form->textField($commodity_model,'comm_price'); ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<?php echo $form->label($commodity_model, 'comm_kind'); ?>
-				</td>
-				<td>
-					<?php echo $form->dropDownList($commodity_model,'comm_kind',array('服务','商品')); ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<?php echo $form->label($commodity_model, 'comm_on_shelve_time'); ?>
-				</td>
-				<td>
-					<?php echo $form->dateTimeLocalField($commodity_model,'comm_on_shelve_time'); ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<?php echo $form->label($commodity_model, 'comm_off_shelve_time'); ?>
-				</td>
-				<td>
-					<?php echo $form->dateTimeLocalField($commodity_model,'comm_off_shelve_time'); ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<?php echo $form->label($commodity_model, 'comm_update_time'); ?>
-				</td>
-				<td>
-					<?php echo $form->dateTimeLocalField($commodity_model,'comm_update_time'); ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<?php echo $form->label($commodity_model, 'comm_check_times'); ?>
-				</td>
-				<td>
-					<?php echo $form->textField($commodity_model,'comm_check_times'); ?>
 				</td>
 			</tr>
 			<tr>
@@ -98,7 +66,7 @@
 					<?php echo $form->label($commodity_model, 'comm_intro2'); ?>
 				</td>
 				<td>
-					<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
+					<?php echo $form->textArea($commodity_model,'comm_intro2',array('cols'=>100,'rows'=>5)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -106,7 +74,7 @@
 					<?php echo $form->label($commodity_model, 'comm_intro3'); ?>
 				</td>
 				<td>
-					<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
+					<?php echo $form->textArea($commodity_model,'comm_intro3',array('cols'=>100,'rows'=>5)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -114,7 +82,7 @@
 					<?php echo $form->label($commodity_model, 'comm_intro4'); ?>
 				</td>
 				<td>
-					<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
+					<?php echo $form->textArea($commodity_model,'comm_intro4',array('cols'=>100,'rows'=>5)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -122,7 +90,7 @@
 					<?php echo $form->label($commodity_model, 'comm_intro5'); ?>
 				</td>
 				<td>
-					<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
+					<?php echo $form->textArea($commodity_model,'comm_intro5',array('cols'=>100,'rows'=>5)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -130,7 +98,7 @@
 					<?php echo $form->label($commodity_model, 'comm_is_hot'); ?>
 				</td>
 				<td>
-					<?php echo $form->dropDownList($commodity_model,'comm_is_hot',array('是','否')); ?>
+					<?php echo $form->dropDownList($commodity_model,'comm_is_hot',array('否','是')); ?>
 				</td>
 			</tr>
 			<tr>
@@ -138,7 +106,7 @@
 					<?php echo $form->label($commodity_model, 'comm_is_show'); ?>
 				</td>
 				<td>
-					<?php echo $form->dropDownList($commodity_model,'comm_is_show',array('是','否')); ?>
+					<?php echo $form->dropDownList($commodity_model,'comm_is_show',array('否','是')); ?>
 				</td>
 			</tr>
 			<tr>
