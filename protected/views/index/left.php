@@ -98,7 +98,7 @@
 				<tr height=22>
 					<td style="padding-left: 30px" background=<?php echo BACK_IMG_URL; ?>menu_bt.jpg><a
 							class=menuparent onclick=expand(3)
-							href="javascript:void(0);">产品中心</a></td></tr>
+							href="javascript:void(0);">商品管理</a></td></tr>
 				<tr height=4>
 					<td></td></tr></table>
 			<table id=child3 style="display: none" cellspacing=0 cellpadding=0
@@ -108,32 +108,14 @@
 					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
 					<td><a class=menuchild
 					       href="./index.php?r=commodity/show"
-					       target="right">产品展示</a></td></tr>
-				<tr height=20>
-					<td align=middle width=30><img height=9
-					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
-					<td><a class=menuchild
-					       href="#"
-					       target=main>最新产品</a></td></tr>
-				<tr height=20>
-					<td align=middle width=30><img height=9
-					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
-					<td><a class=menuchild
-					       href="#"
-					       target=main>分类管理</a></td></tr>
-				<tr height=20>
-					<td align=middle width=30><img height=9
-					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
-					<td><a class=menuchild
-					       href="#"
-					       target=main>子类管理</a></td></tr>
+					       target="right">商品一览</a></td></tr>
 				<tr height=4>
 					<td colspan=2></td></tr></table>
 			<table cellspacing=0 cellpadding=0 width=150 border=0>
 				<tr height=22>
 					<td style="padding-left: 30px" background=<?php echo BACK_IMG_URL; ?>menu_bt.jpg><a
 							class=menuparent onclick=expand(4)
-							href="javascript:void(0);">客户服务</a></td></tr>
+							href="javascript:void(0);">用户管理</a></td></tr>
 				<tr height=4>
 					<td></td></tr></table>
 			<table id=child4 style="display: none" cellspacing=0 cellpadding=0
@@ -142,20 +124,8 @@
 					<td align=middle width=30><img height=9
 					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
 					<td><a class=menuchild
-					       href="#"
-					       target=main>客户服务</a></td></tr>
-				<tr height=20>
-					<td align=middle width=30><img height=9
-					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
-					<td><a class=menuchild
-					       href="#"
-					       target=main>分类管理</a></td></tr>
-				<tr height=20>
-					<td align=middle width=30><img height=9
-					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
-					<td><a class=menuchild
-					       href="#"
-					       target=main>子类管理</a></td></tr>
+					       href="./index.php?r=user/show"
+					       target="right">用户一览</a></td></tr>
 				<tr height=4>
 					<td colspan=2></td></tr></table>
 			<table cellspacing=0 cellpadding=0 width=150 border=0>

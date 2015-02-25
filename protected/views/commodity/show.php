@@ -13,7 +13,7 @@
 </style>
 <div class="div_head">
             <span>
-                <span style="float: left;">当前位置是：商品管理-》商品列表</span>
+                <span style="float: left;">当前位置是：商品管理-》商品一览</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
                     <a style="text-decoration: none;" href="./index.php?r=commodity/add">【添加商品】</a>
                 </span>
@@ -107,7 +107,16 @@
 						}
 					?></a></td>
 				<td><?php echo $_v->comm_sort_order; ?></a></td>
-				<td><a href="./index.php?r=commodity/del&id=<?php echo $_v->pk_comm_id ?>">删除</a></td>
+				<td>
+					<script language="javascript">
+						function delcfm() {
+							if (!confirm("确认要删除？")) {
+								window.event.returnValue = false;
+							}
+						}
+					</script>
+					<a href="./index.php?r=commodity/del&id=<?php echo $_v->pk_comm_id ?>" onClick="delcfm()">删除</a>
+				</td>
 			</tr>
 		<?php
 		}
