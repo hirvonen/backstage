@@ -41,6 +41,7 @@ class UserController extends Controller
 	 */
 	public function actionDel($id)
 	{
+		/*
 		$user_model = User::model();
 		$user_info = $user_model->findByPk($id);
 		if($user_info->delete()){
@@ -48,9 +49,21 @@ class UserController extends Controller
 		}
 		else{
 			echo "<script>alert('".$user_model->usr_name." 删除失败');</script>";
-		}
+		}*/
 		//因为pk_usr_id被很多表当做外键使用，所以无法简单删除
 		//本功能暂时不用
 		//$this->redirect('./index.php?r=user/show');
+		echo "<script>alert('因为pk_usr_id被很多表当做外键使用，所以无法简单删除。本功能暂时封印。');</script>";
+	}
+
+	/**
+	 * 初始化用户密码
+	 */
+	public function actionInitPassword($id)
+	{
+		$user_model = User::model();
+		$user_info = $user_model->findByPk($id);
+		$user_info->usr_password = md5("xyz123456");
+		echo "<script>alert('用户密码已被初始化为“xyz123456”。'+<br>+'请及时登录更改密码！');</script>";
 	}
 }

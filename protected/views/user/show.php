@@ -85,16 +85,6 @@
 					?></a></td>
 				<td><?php echo $_v->usr_username; ?></a></td>
 				<td><?php echo $_v->usr_create_time; ?></a></td>
-				<td>
-					<script language="javascript">
-						function delcfm() {
-							if (!confirm("确认要删除？")) {
-								window.event.returnValue = false;
-							}
-						}
-					</script>
-					<a href="./index.php?r=user/del&id=<?php echo $_v->pk_usr_id ?>" onClick="delcfm()">删除</a>
-				</td>
 			</tr>
 		<?php
 		}

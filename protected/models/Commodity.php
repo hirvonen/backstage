@@ -46,4 +46,16 @@ class Commodity extends CActiveRecord
 			'comm_sort_order'=>'顺序',
 		);
 	}
+
+	/**
+	 * 商品添加表单验证规则
+	 */
+	public function rules()
+	{
+		return array(
+			array('comm_name','required','message'=>'商品名称必填'),
+			array('comm_price','required','message'=>'商品价格必填'),
+			array('comm_intro1','required','message'=>'商品简介必填'),
+		);
+	}
 }

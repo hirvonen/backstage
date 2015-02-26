@@ -35,6 +35,8 @@
 				</td>
 				<td>
 					<?php echo $form->textField($commodity_model,'comm_name'); ?>
+					<!--表单验证失败显示错误信息-->
+					<?php echo $form->error($commodity_model,'comm_name'); ?>
 				</td>
 			</tr>
 			<tr>
@@ -43,6 +45,8 @@
 				</td>
 				<td>
 					<?php echo $form->textField($commodity_model,'comm_price'); ?>
+					<!--表单验证失败显示错误信息-->
+					<?php echo $form->error($commodity_model,'comm_price'); ?>
 				</td>
 			</tr>
 			<tr>
@@ -59,6 +63,8 @@
 				</td>
 				<td>
 					<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
+					<!--表单验证失败显示错误信息-->
+					<?php echo $form->error($commodity_model,'comm_intro1'); ?>
 				</td>
 			</tr>
 			<tr>

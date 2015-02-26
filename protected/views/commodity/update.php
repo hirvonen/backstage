@@ -26,7 +26,7 @@
 				<?php echo $form->label($commodity_model, 'comm_kind'); ?>
 			</td>
 			<td>
-				<?php echo $form->dropDownList($commodity_model,'comm_kind',array('服务','商品')); ?>
+				<?php echo $form->dropDownList($commodity_model,'comm_kind',array('商品','服务')); ?>
 			</td>
 		</tr>
 		<tr>

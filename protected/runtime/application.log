@@ -503,3 +503,67 @@ Stack trace:
 REQUEST_URI=/yii_learn/backstage/index.php?r=user/del&id=1000005
 HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/show
 ---
+2015/02/26 21:50:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`eyoungdb`.`tbl_customer`, CONSTRAINT `fk_customer_user` FOREIGN KEY (`pk_cust_id`) REFERENCES `tbl_user` (`pk_usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`pk_usr_id`='1000012'.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (46)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/26 21:50:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`eyoungdb`.`tbl_customer`, CONSTRAINT `fk_customer_user` FOREIGN KEY (`pk_cust_id`) REFERENCES `tbl_user` (`pk_usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `tbl_user` WHERE `tbl_user`.`pk_usr_id`='1000012'' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1807): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1227): CActiveRecord->deleteByPk('1000012')
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(46): CActiveRecord->delete()
+#3 [internal function]: UserController->actionDel('1000012')
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('del')
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/del')
+#11 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/del&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/show
+---
+2015/02/26 23:17:42 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.enableClintValidation" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWidgetFactory.php(161): CComponent->__set('enableClintVali...', true)
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CActiveForm', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(197): CBaseController->createWidget('CActiveForm', Array)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/login.php(27): CBaseController->beginWidget('CActiveForm', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', NULL, true)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', NULL, true)
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(15): CController->renderPartial('login')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#14 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
+---
+2015/02/26 23:19:16 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.enableClintValidation" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWidgetFactory.php(161): CComponent->__set('enableClintVali...', true)
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CActiveForm', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(197): CBaseController->createWidget('CActiveForm', Array)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/login.php(27): CBaseController->beginWidget('CActiveForm', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', NULL, true)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', NULL, true)
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(15): CController->renderPartial('login')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#14 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
+---

@@ -62,9 +62,10 @@ class CommodityController extends Controller
 			isset($_POST["Commodity"]["comm_discount"]) &&
 			isset($_POST["Commodity"]["comm_intro1"])) {
 
-			foreach ($_POST["Commodity"] as $_name=>$_value) {
-				$commodity_model->$_name = $_value;
-			}
+			//foreach ($_POST["Commodity"] as $_name=>$_value) {
+			//	$commodity_model->$_name = $_value;
+			//}
+			$commodity_model->attributes = $_POST["Commodity"];
 
 			//DB内的值为1和2，网页上的值为0和1
 			if( $_POST["Commodity"]["comm_kind"] == 0 ){
@@ -114,10 +115,10 @@ class CommodityController extends Controller
 
 			//DB内的值为1和2，网页上的值为0和1
 			if( $_POST["Commodity"]["comm_kind"] == 0 ){
-				$commodity_info->comm_kind = 1;
+				$commodity_info->comm_kind = 2;
 			}
 			else{
-				$commodity_info->comm_kind = 2;
+				$commodity_info->comm_kind = 1;
 			}
 
 			//修改时间

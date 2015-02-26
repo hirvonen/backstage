@@ -17,7 +17,15 @@
 				<li class="user_top_c"></li>
 				<li class="user_top_r"></li></ul>
 		</dd><dd id="user_main">
-			<form action="#" method="post">
+			<?php $form = $this->beginWidget('CActiveForm',
+												array(
+													'enableClientValidation'=>true,
+													'clientOptions'=>array(
+																		'validateOnSubmit'=>true,
+																	),
+												)
+											);
+			?>
 				<ul>
 					<li class="user_main_l"></li>
 					<li class="user_main_c">
@@ -46,7 +54,7 @@
 						<input style="border: medium none; background: url('<?php echo BACK_IMG_URL; ?>user_botton.gif') repeat-x scroll left top transparent; height: 122px; width: 111px; display: block; cursor: pointer;" value="" type="submit">
 					</li>
 				</ul>
-			</form>
+			<?php $this->endWidget(); ?>
 		</dd><dd id="user_bottom">
 			<ul>
 				<li class="user_bottom_l"></li>

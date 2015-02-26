@@ -75,7 +75,7 @@
 						echo "服务";
 					}
 					else{
-						echo "产品";
+						echo "商品";
 					}
 					?></a></td>
 				<td><a href="#"><?php echo $_v->comm_name; ?></a></td>

@@ -99,7 +99,7 @@
 			</td>
 			<td>
 				<span style="float:left;margin-left: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="./index.php?r=user/initPassword">初始化用户密码</a>
+                    <a style="text-decoration: none" href="./index.php?r=user/initPassword&id=<?php echo $user_info->pk_usr_id ?>">初始化用户密码</a>
                 </span>
 			</td>
 		</tr>
