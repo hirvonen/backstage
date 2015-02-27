@@ -567,3 +567,690 @@ Stack trace:
 #16 {main}
 REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
 ---
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:15 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:37 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:31:44 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:32:16 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:51 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:33:57 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:20 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:35:27 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:27 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:34 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:49 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:37:58 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:38:14 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_kind" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_discount" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_intro2" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_intro3" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_intro4" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_intro5" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_is_hot" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:39:00 [warning] [application] Failed to set unsafe attribute "comm_sort_order" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 22:59:52 [error] [php] include(comm_kind.php): failed to open stream: No such file or directory (/Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php(303): class_exists()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(174): import()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): createValidator()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): Commodity->createValidators()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): Commodity->getValidators()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(37): CActiveForm->textField()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#12 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(92): CommodityController->renderPartial()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php (37)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (92)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:00:17 [error] [php] include(comm_kind.php): failed to open stream: No such file or directory (/Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php(303): class_exists()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(174): import()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): createValidator()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): Commodity->createValidators()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): Commodity->getValidators()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(37): CActiveForm->textField()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#12 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(92): CommodityController->renderPartial()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php (37)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (92)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:00:37 [error] [php] include(comm_intro2.php): failed to open stream: No such file or directory (/Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php(303): class_exists()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(174): import()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): createValidator()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): Commodity->createValidators()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): Commodity->getValidators()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(37): CActiveForm->textField()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#12 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(92): CommodityController->renderPartial()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php (37)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (92)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:01:08 [error] [php] include(comm_intro2.php): failed to open stream: No such file or directory (/Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php(303): class_exists()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(174): import()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): createValidator()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): Commodity->createValidators()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): Commodity->getValidators()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(37): CActiveForm->textField()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#12 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(92): CommodityController->renderPartial()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php (37)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (92)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:01:34 [error] [php] include(comm_intro2.php): failed to open stream: No such file or directory (/Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/YiiBase.php(303): class_exists()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(174): import()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): createValidator()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): Commodity->createValidators()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): Commodity->getValidators()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php(37): CActiveForm->textField()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#12 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(92): CommodityController->renderPartial()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAdd()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/add.php (37)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (92)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:06:19 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:08:44 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:08:50 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/27 23:08:56 [warning] [application] Failed to set unsafe attribute "comm_is_show" of "Commodity".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:35:23 [error] [php] Undefined variable: commodity_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php:41)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(35): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionShow()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php (41)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (35)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:35:47 [error] [php] Array to string conversion (/Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php:2378)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1980): resolveNameID()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(914): activeDropDownList()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php(41): CActiveForm->dropDownList()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(35): CommodityController->renderPartial()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionShow()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php (41)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (35)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:36:53 [error] [php] Array to string conversion (/Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php:2378)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1980): resolveNameID()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(914): activeDropDownList()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php(43): CActiveForm->dropDownList()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(35): CommodityController->renderPartial()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionShow()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php (43)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (35)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:41:43 [error] [php] Missing argument 2 for CActiveForm::label(), called in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php on line 45 and defined (/Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php:583)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CommodityController->renderInternal()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(35): CommodityController->renderPartial()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionShow()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/show.php (45)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (35)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:49:48 [error] [php] Undefined offset: 0 (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:55)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:49:56 [error] [php] Undefined offset: 0 (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:55)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:50:01 [error] [php] Undefined offset: 0 (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:55)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:51:04 [error] [php] Undefined offset: 0 (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:55)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 00:51:26 [error] [php] Undefined offset: 0 (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php:55)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 01:05:56 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php:67) (/Users/alfredzhang/Sites/yii_learn/framework/web/CHttpRequest.php:860)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(68): UserController->redirect()
+#1 unknown(0): UserController->actionInitPassword()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): UserController->runAction()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/initPassword&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/02/28 01:07:23 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php:67) (/Users/alfredzhang/Sites/yii_learn/framework/web/CHttpRequest.php:860)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(68): UserController->redirect()
+#1 unknown(0): UserController->actionInitPassword()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): UserController->runAction()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/initPassword&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (68)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)

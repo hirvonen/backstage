@@ -27,7 +27,7 @@
 		            <option selected="selected" value="0">请选择</option>
 		            <option value="1">管理员</option>
 		            <option value="2">顾客</option>
-		            <option value="2">理疗师</option>
+		            <option value="3">理疗师</option>
 	            </select>
 	                <input value="查询" type="submit" />
 	            <?php $this->endWidget(); ?>

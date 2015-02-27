@@ -31,18 +31,20 @@
 		</tr>
 		<tr>
 			<td>
-				<?php echo $form->label($commodity_model, 'comm_name'); ?>
+				<?php echo $form->labelEx($commodity_model, 'comm_name'); ?>
 			</td>
 			<td>
 				<?php echo $form->textField($commodity_model,'comm_name'); ?>
+				<?php echo $form->error($commodity_model,'comm_name'); ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<?php echo $form->label($commodity_model, 'comm_price'); ?>
+				<?php echo $form->labelEx($commodity_model, 'comm_price'); ?>
 			</td>
 			<td>
 				<?php echo $form->textField($commodity_model,'comm_price'); ?>
+				<?php echo $form->error($commodity_model,'comm_price'); ?>
 			</td>
 		</tr>
 		<tr>
@@ -51,14 +53,16 @@
 			</td>
 			<td>
 				<?php echo $form->textField($commodity_model,'comm_discount'); ?>
+				<?php echo $form->error($commodity_model,'comm_discount'); ?>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<?php echo $form->label($commodity_model, 'comm_intro1'); ?>
+				<?php echo $form->labelEx($commodity_model, 'comm_intro1'); ?>
 			</td>
 			<td>
 				<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
+				<?php echo $form->error($commodity_model,'comm_intro1'); ?>
 			</td>
 		</tr>
 		<tr>
@@ -115,6 +119,7 @@
 			</td>
 			<td>
 				<?php echo $form->textField($commodity_model,'comm_sort_order'); ?>
+				<?php echo $form->error($commodity_model,'comm_sort_order'); ?>
 			</td>
 		</tr>
 

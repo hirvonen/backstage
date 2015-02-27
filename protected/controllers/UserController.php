@@ -21,7 +21,31 @@ class UserController extends Controller
 	public function actionShow()
 	{
 		$user_model = User::model();
-		$user_info = $user_model->findAll();
+
+		if(isset($_POST["usr_kind"])){
+			if($_POST["usr_kind"]==0){
+				$findByFilter = 0;  //用户没有选择，只是单纯刷新页面，需要查询所有记录
+			}
+			else{
+				$findByFilter = 1;  //需要按照filter查询记录
+			}
+		}
+		else{
+			$findByFilter = 0;  //首次进入页面，需要查询所有记录
+		}
+
+		if($findByFilter != 0){
+			if ($_POST["usr_kind"] != 0) {
+				$user_info = $user_model->findAllByAttributes(array('usr_kind' => $_POST["usr_kind"]));
+			}
+			else{
+				$user_info = $user_model->findAll();
+			}
+		}
+		else{
+			$user_info = $user_model->findAll();
+		}
+
 		$this->renderPartial("Show",array('user_info'=>$user_info));
 	}
 
@@ -64,6 +88,7 @@ class UserController extends Controller
 		$user_model = User::model();
 		$user_info = $user_model->findByPk($id);
 		$user_info->usr_password = md5("xyz123456");
-		echo "<script>alert('用户密码已被初始化为“xyz123456”。'+<br>+'请及时登录更改密码！');</script>";
+		echo "<script>alert('用户密码已被初始化为“xyz123456”。请尽快登录修改密码。');</script>";
+		//$this->redirect('./index.php?r=user/show');
 	}
 }

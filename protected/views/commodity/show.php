@@ -23,7 +23,7 @@
 <div class="div_search">
             <span>
                 <?php $form = $this->beginWidget('CActiveForm'); ?>
-	                显示<select name="comm_is_show" style="width: 100px;">
+	            显示<select name="comm_is_show" style="width: 100px;">
 		                <option selected="selected" value="2">请选择</option>
 		                <option value="1">显示</option>
 		                <option value="0">未显示</option>
@@ -38,6 +38,17 @@
 		                <option value="1">热门</option>
 		                <option value="0">非热门</option>
 	                </select>
+	                <?php
+	                    /*foreach ($commodity_info as $_v) {
+		                    echo $form->label($_v,"商品种别");
+		                    echo $form->dropDownList($_v, 'comm_kind', array('请选择','商品', '服务'));
+		                    echo $form->label($_v,"显示");
+		                    echo $form->dropDownList($_v, 'comm_is_show', array('请选择','显示', '未显示'));
+		                    echo $form->label($_v,"热门");
+		                    echo $form->dropDownList($_v, 'comm_is_hot', array('请选择','热门', '非热门'));
+		                    break;
+	                    }*/
+	                ?>
 	                <input value="查询" type="submit" />
 	            <?php $this->endWidget(); ?>
             </span>

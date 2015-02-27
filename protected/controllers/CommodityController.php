@@ -29,24 +29,51 @@ class CommodityController extends Controller
 			$findByFilter = 0;  //首次进入页面，需要查询所有记录
 		}
 
-		$commodity_info1 = $commodity_model->findAll();
 		if($findByFilter == 0){
-
+			$commodity_info = $commodity_model->findAll();
 		}
 		else{
 			if($_POST["comm_is_show"]!=2) {
-				$commodity_info1 = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"]));
+				if(($_POST["comm_kind"]!=0) && ($_POST["comm_is_hot"]!=2)){
+					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"],
+																					'comm_kind'=>$_POST["comm_kind"],
+																					'comm_is_hot'=>$_POST["comm_is_hot"]));
+				}
+				elseif($_POST["comm_kind"]!=0){
+					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"],
+																					'comm_kind'=>$_POST["comm_kind"]));
+				}
+				elseif($_POST["comm_is_hot"]!=2){
+					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"],
+																					'comm_is_hot'=>$_POST["comm_is_hot"]));
+				}
+				else{
+					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"]));
+				}
 			}
-			if($_POST["comm_kind"]!=0){
-				$commodity_info2 = $commodity_info1->findAllByAttributes(array('comm_kind'=>$_POST["comm_kind"]));
-			}
-			if($_POST["comm_is_hot"]!=2){
-				$commodity_info3 = $commodity_info2->findAllByAttributes(array('comm_is_hot'=>$_POST["comm_is_hot"]));
+			else{
+				if($_POST["comm_kind"]!=0){
+					if($_POST["comm_is_hot"]!=2){
+						$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>$_POST["comm_kind"],
+																						'comm_is_hot'=>$_POST["comm_is_hot"]));
+					}
+					else{
+						$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>$_POST["comm_kind"]));
+					}
+				}
+				else{
+					if($_POST["comm_is_hot"]!=2){
+						$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_hot'=>$_POST["comm_is_hot"]));
+					}
+					else{
+						$commodity_info = $commodity_model->findAll();
+					}
+				}
 			}
 		}
 
 		//传递到视图
-		$this->renderPartial('show',array('commodity_info'=>$commodity_info1));
+		$this->renderPartial('show',array('commodity_info'=>$commodity_info));
 	}
 
 	/**

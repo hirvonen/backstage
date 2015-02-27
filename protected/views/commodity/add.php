@@ -23,7 +23,7 @@
 		<table border="1" width="100%" class="table_a">
 			<tr>
 				<td>
-					<?php echo $form->label($commodity_model, 'comm_kind'); ?>
+					<?php echo $form->labelEx($commodity_model, 'comm_kind'); ?>
 				</td>
 				<td>
 					<?php echo $form->dropDownList($commodity_model,'comm_kind',array('服务','商品')); ?>
@@ -31,7 +31,7 @@
 			</tr>
 			<tr>
 				<td>
-					<?php echo $form->label($commodity_model, 'comm_name'); ?>
+					<?php echo $form->labelEx($commodity_model, 'comm_name'); ?>
 				</td>
 				<td>
 					<?php echo $form->textField($commodity_model,'comm_name'); ?>
@@ -41,7 +41,7 @@
 			</tr>
 			<tr>
 				<td>
-					<?php echo $form->label($commodity_model, 'comm_price'); ?>
+					<?php echo $form->labelEx($commodity_model, 'comm_price'); ?>
 				</td>
 				<td>
 					<?php echo $form->textField($commodity_model,'comm_price'); ?>
@@ -59,7 +59,7 @@
 			</tr>
 			<tr>
 				<td>
-					<?php echo $form->label($commodity_model, 'comm_intro1'); ?>
+					<?php echo $form->labelEx($commodity_model, 'comm_intro1'); ?>
 				</td>
 				<td>
 					<?php echo $form->textArea($commodity_model,'comm_intro1',array('cols'=>100,'rows'=>5)); ?>
@@ -121,6 +121,7 @@
 				</td>
 				<td>
 					<?php echo $form->textField($commodity_model,'comm_sort_order'); ?>
+					<?php echo $form->error($commodity_model,'comm_sort_order'); ?>
 				</td>
 			</tr>
 
