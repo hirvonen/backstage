@@ -24,4 +24,28 @@ class Commodity_Service extends CActiveRecord
 	{
 		return '{{commodity_service}}';
 	}
+
+    public function attributeLabels()
+    {
+        return array(
+            'serv_kind'=>'服务种别',
+            'serv_duration'=>'单次服务时长(小时)',
+            'serv_single'=>'是否单次出售',
+            'serv_time'=>'疗程内服务次数',
+        );
+    }
+
+    /**
+     * 商品添加表单验证规则
+     */
+    public function rules()
+    {
+        return array(
+            array('serv_duration','required','message'=>'单次服务时长必填'),
+            array('serv_duration','match','pattern'=>'/^[1-9]\d*$/','message'=>'时长必须是非0数字'),
+            array('serv_time','required','message'=>'疗程内服务次数必填'),
+            array('serv_time','match','pattern'=>'/^[1-9]\d*$/','message'=>'服务次数必须是非0数字'),
+            array('serv_kind,serv_single','safe'),
+        );
+    }
 }

@@ -7,10 +7,10 @@
 class CommodityController extends Controller
 {
 	/**
-	 * 商品展示
+	 * 服务一览
 	 * @throws CException
 	 */
-	public function actionShow()
+	public function actionShowService()
 	{
 		//通过模型来实现数据表信息查询
 		//产生模型对象
@@ -18,89 +18,50 @@ class CommodityController extends Controller
 
 		//判断Filter是否被用户选择了
 		if(isset($_POST["comm_is_show"])){
-			if($_POST["comm_is_show"]==2 && $_POST["comm_kind"]==0 && $_POST["comm_is_hot"]==2){
-				$findByFilter = 0;  //用户没有选择，只是单纯刷新页面，需要查询所有记录
+            if(($_POST["comm_is_show"]!=2)&&($_POST["comm_is_hot"]!=2)) {
+				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
+                                                                                'comm_is_show'=>$_POST["comm_is_show"],
+                                                                                'comm_is_hot'=>$_POST["comm_is_hot"]));
 			}
-			else{
-				$findByFilter = 1;  //需要按照filter查询记录
+			elseif($_POST["comm_is_show"]!=2){
+                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
+                                                                                'comm_is_show'=>$_POST["comm_is_show"]));
 			}
-		}
-		else{
-			$findByFilter = 0;  //首次进入页面，需要查询所有记录
-		}
-
-		if($findByFilter == 0){
-			$commodity_info = $commodity_model->findAll();
-		}
-		else{
-			if($_POST["comm_is_show"]!=2) {
-				if(($_POST["comm_kind"]!=0) && ($_POST["comm_is_hot"]!=2)){
-					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"],
-																					'comm_kind'=>$_POST["comm_kind"],
-																					'comm_is_hot'=>$_POST["comm_is_hot"]));
-				}
-				elseif($_POST["comm_kind"]!=0){
-					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"],
-																					'comm_kind'=>$_POST["comm_kind"]));
-				}
-				elseif($_POST["comm_is_hot"]!=2){
-					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"],
-																					'comm_is_hot'=>$_POST["comm_is_hot"]));
-				}
-				else{
-					$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_show'=>$_POST["comm_is_show"]));
-				}
+            elseif($_POST["comm_is_hot"]!=2){
+                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
+                                                                                'comm_is_hot'=>$_POST["comm_is_hot"]));
 			}
-			else{
-				if($_POST["comm_kind"]!=0){
-					if($_POST["comm_is_hot"]!=2){
-						$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>$_POST["comm_kind"],
-																						'comm_is_hot'=>$_POST["comm_is_hot"]));
-					}
-					else{
-						$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>$_POST["comm_kind"]));
-					}
-				}
-				else{
-					if($_POST["comm_is_hot"]!=2){
-						$commodity_info = $commodity_model->findAllByAttributes(array('comm_is_hot'=>$_POST["comm_is_hot"]));
-					}
-					else{
-						$commodity_info = $commodity_model->findAll();
-					}
-				}
-			}
+            else{
+                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1"));
+            }
 		}
+        else{
+            $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1"));
+        }
 
 		//传递到视图
-		$this->renderPartial('show',array('commodity_info'=>$commodity_info));
+		$this->renderPartial('showService',array('commodity_info'=>$commodity_info));
 	}
 
 	/**
-	 * 商品增加
+	 * 服务增加
 	 * @throws CException
 	 */
-	public function actionAdd()
+	public function actionAddService()
 	{
 		$commodity_model = new Commodity();
+        $commodity_service_model = new Commodity_Service();
 
-		if(isset($_POST["Commodity"]["comm_name"]) &&
-			isset($_POST["Commodity"]["comm_price"]) &&
-			isset($_POST["Commodity"]["comm_discount"]) &&
-			isset($_POST["Commodity"]["comm_intro1"])) {
+		if(isset($_POST["Commodity"]) && isset($_POST["Commodity_Service"])) {
 
 			//foreach ($_POST["Commodity"] as $_name=>$_value) {
 			//	$commodity_model->$_name = $_value;
 			//}
 			$commodity_model->attributes = $_POST["Commodity"];
+            $commodity_service_model->attributes = $_POST["Commodity_Service"];
 
 			//DB内的值为1和2，网页上的值为0和1
-			if( $_POST["Commodity"]["comm_kind"] == 0 ){
-				$commodity_model->comm_kind = 1;
-			}
-			else{
-				$commodity_model->comm_kind = 2;
-			}
+			$commodity_model->comm_kind = 1;
 
 			//如果商品为表示的，则认定商品已经上架
 			if($commodity_model->comm_is_show == 1) {
@@ -110,43 +71,64 @@ class CommodityController extends Controller
 			//插入DB
 			if($commodity_model->save()) {
 				//页面重定向
-				$this->redirect('./index.php?r=commodity/show');
+                //Commodity_service的表单主键设置
+                $commodity_service_model->pk_serv_id = $commodity_model->pk_comm_id;
+                if($commodity_service_model->save()) {
+                    $this->redirect('./index.php?r=commodity/showService');
+                }
+                else{
+                    //删除已经插入的数据
+                    $commodity_info = $commodity_model->findByPk($commodity_model->pk_comm_id);
+                    $commodity_info->delete();
+
+                    //出个警告
+                    echo "<script>alert('".$_POST["Commodity"]["comm_name"]." 添加失败');</script>";
+                }
 			}
 			else{
 				echo "<script>alert('".$_POST["Commodity"]["comm_name"]." 添加失败');</script>";
 			}
+            /*echo "<pre>";
+            print_r($_POST["Commodity"]);
+            print_r($_POST["Commodity_Service"]);
+            echo "</pre>";*/
 		}
-		$this->renderPartial('add',array('commodity_model'=>$commodity_model));
+		$this->renderPartial('addService',array('commodity_model'=>$commodity_model,
+                                                'commodity_service_model'=>$commodity_service_model));
 	}
 
 	/**
 	 * 商品修改
 	 * @throws CException
 	 */
-	public function actionUpdate($id)
+	public function actionUpdateService($id)
 	{
 		$commodity_model = Commodity::model();
 		$commodity_info = $commodity_model->findByPk($id);
 
+        if(!isset($commodity_info)){
+            echo "<script>alert('commodity表中未找到该条记录！');</script>";
+        }
+
+        $commodity_service_model = Commodity_Service::model();
+        $commodity_service_info = $commodity_service_model->findByPk($id);
+
+        if(!isset($commodity_service_info)){
+            echo "<script>alert('commodity_service表中未找到该条记录！');</script>";
+        }
+
 		//修改前先记录商品是否表示的信息，用来判断商品是否下架
 		$commodity_show = $commodity_info->comm_is_show;
 
-		if(isset($_POST["Commodity"]["comm_name"]) &&
-			isset($_POST["Commodity"]["comm_price"]) &&
-			isset($_POST["Commodity"]["comm_discount"]) &&
-			isset($_POST["Commodity"]["comm_intro1"])) {
+        if(isset($_POST["Commodity"]) && isset($_POST["Commodity_Service"])) {
 
-			foreach ($_POST["Commodity"] as $_name=>$_value) {
-				$commodity_info->$_name = $_value;
-			}
+			//foreach ($_POST["Commodity"] as $_name=>$_value) {
+			//	$commodity_info->$_name = $_value;
+			//}
+            $commodity_info->attributes = $_POST["Commodity"];
+            $commodity_service_info->attributes = $_POST["Commodity_Service"];
 
-			//DB内的值为1和2，网页上的值为0和1
-			if( $_POST["Commodity"]["comm_kind"] == 0 ){
-				$commodity_info->comm_kind = 2;
-			}
-			else{
-				$commodity_info->comm_kind = 1;
-			}
+            $commodity_info->comm_kind = 1;
 
 			//修改时间
 			$commodity_info->comm_update_time = date("Y-m-d H:i:s",time());
@@ -166,31 +148,46 @@ class CommodityController extends Controller
 			}
 
 			//插入DB
-			if($commodity_info->save()) {
+			if(($commodity_service_info->save())&&($commodity_info->save())) {
 				//页面重定向
-				$this->redirect('./index.php?r=commodity/show');
+				$this->redirect('./index.php?r=commodity/showService');
 			}
 			else{
 				echo "<script>alert('".$_POST["Commodity"]["comm_name"]." 修改失败');</script>";
 			}
 		}
 
-		$this->renderPartial('Update',array("commodity_model"=>$commodity_info));
+		$this->renderPartial('UpdateService',array("commodity_model"=>$commodity_info,
+                                            "commodity_service_model"=>$commodity_service_info));
 	}
 
 	/**
-	 * 商品删除
+	 * 服务删除
 	 */
-	public function actionDel($id)
+	public function actionDelService($id)
 	{
 		$commodity_model = Commodity::model();
 		$commodity_info = $commodity_model->findByPk($id);
-		if($commodity_info->delete()){
-			$this->redirect('./index.php?r=commodity/show');
-		}
-		else{
-			echo "<script>alert('".$commodity_info->comm_name." 删除失败');</script>";
-		}
+        $commodity_service_model = Commodity_Service::model();
+        $commodity_service_info = $commodity_service_model->findByPk($id);
+
+        //如果有单独服务信息的话，先删除单独的服务信息，再删除主表信息
+        if(isset($commodity_service_info)){
+            if(($commodity_service_info->delete())&&($commodity_info->delete())){
+                $this->redirect('./index.php?r=commodity/showService');
+            }
+            else{
+                echo "<script>alert('".$commodity_info->comm_name." 删除失败');</script>";
+            }
+        }
+        else{
+            if($commodity_info->delete()){
+                $this->redirect('./index.php?r=commodity/showService');
+            }
+            else{
+                echo "<script>alert('".$commodity_info->comm_name." 删除失败');</script>";
+            }
+        }
 	}
 
 	/**

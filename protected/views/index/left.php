@@ -103,11 +103,17 @@
 					<td></td></tr></table>
 			<table id=child3 style="display: none" cellspacing=0 cellpadding=0
 			       width=150 border=0>
+                <tr height=20>
+                    <td align=middle width=30><img height=9
+                                                   src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
+                    <td><a class=menuchild
+                           href="./index.php?r=commodity/showService"
+                           target="right">服务一览</a></td></tr>
 				<tr height=20>
 					<td align=middle width=30><img height=9
 					                               src="<?php echo BACK_IMG_URL; ?>menu_icon.gif" width=9></td>
 					<td><a class=menuchild
-					       href="./index.php?r=commodity/show"
+					       href="./index.php?r=commodity/showProduct"
 					       target="right">商品一览</a></td></tr>
 				<tr height=4>
 					<td colspan=2></td></tr></table>
