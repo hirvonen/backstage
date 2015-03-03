@@ -12,21 +12,28 @@
             <span>
                 <span style="float:left">当前位置是：商品管理-》修改商品信息</span>
                 <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="./index.php?r=commodity/show">【返回】</a>
+                    <a style="text-decoration: none" href="./index.php?r=commodity/showProduct">【返回】</a>
                 </span>
             </span>
 </div>
 <div></div>
 
 <div style="font-size: 13px;margin: 10px 5px">
-	<?php $form = $this->beginWidget('CActiveForm'); ?>
+	<?php $form = $this->beginWidget('CActiveForm', array(
+			'enableClientValidation'=>true,
+			'clientOptions'=>array(
+				'validateOnSubmit'=>true,
+			),
+		)
+	);
+	?>
 	<table border="1" width="100%" class="table_a">
 		<tr>
 			<td>
 				<?php echo $form->label($commodity_model, 'comm_kind'); ?>
 			</td>
 			<td>
-				<?php echo $form->dropDownList($commodity_model,'comm_kind',array('商品','服务')); ?>
+				<?php echo $form->label($commodity_model, 'comm_kind'); ?>
 			</td>
 		</tr>
 		<tr>
@@ -120,6 +127,32 @@
 			<td>
 				<?php echo $form->textField($commodity_model,'comm_sort_order'); ?>
 				<?php echo $form->error($commodity_model,'comm_sort_order'); ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<?php echo $form->label($commodity_product_model, 'prod_kind'); ?>
+			</td>
+			<td>
+				<?php echo $form->dropDownList($commodity_product_model,'prod_kind',array('实体商品','虚拟商品')); ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<?php echo $form->labelEx($commodity_product_model, 'prod_stock'); ?>
+			</td>
+			<td>
+				<?php echo $form->textField($commodity_product_model,'prod_stock'); ?>
+				<?php echo $form->error($commodity_product_model,'prod_stock'); ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<?php echo $form->labelEx($commodity_product_model, 'prod_brand_id'); ?>
+			</td>
+			<td>
+				<?php echo $form->textField($commodity_product_model,'prod_brand_id'); ?>
+				<?php echo $form->error($commodity_product_model,'prod_brand_id'); ?>
 			</td>
 		</tr>
 

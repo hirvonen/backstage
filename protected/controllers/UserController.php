@@ -12,7 +12,19 @@ class UserController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$this->renderPartial("login");
+		$user_login = new LoginForm;
+
+		if(isset($_POST['LoginForm'])){
+			//收集表单信息
+			$user_login->attributes = $_POST['LoginForm'];
+
+			if($user_login->validate()){
+				echo "login success";
+			}
+
+		}
+
+		$this->renderPartial("login",array('user_login'=>$user_login));
 	}
 
 	/**

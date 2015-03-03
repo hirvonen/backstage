@@ -1791,3 +1791,273 @@ Stack trace:
 REQUEST_URI=/yii/backstage/index.php?r=commodity/updateService&id=10045
 in C:\wamp\www\yii\backstage\protected\controllers\CommodityController.php (132)
 in C:\wamp\www\yii\backstage\index.php (15)
+2015/03/01 23:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/show')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/01 23:56:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/show')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/01 23:57:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/show')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/updateService&id=10000
+---
+2015/03/02 00:10:50 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.enablleClientValidation" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWidgetFactory.php(161): CComponent->__set('enablleClientVa...', true)
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(CommodityController), 'CActiveForm', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(197): CBaseController->createWidget('CActiveForm', Array)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php(28): CBaseController->beginWidget('CActiveForm', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(97): CController->renderPartial('addService', Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddService()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('addService')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/addSe...')
+#14 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addService
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/showService
+---
+2015/03/02 00:16:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/show')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+---
+2015/03/02 00:16:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+---
+2015/03/03 00:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+---
+2015/03/03 00:07:51 [error] [php] Undefined variable: commodity_service_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php:138)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(133): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addproduct
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php (138)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (133)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/03 00:08:47 [error] [php] Undefined variable: commodity_service_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php:138)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(133): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addProduct
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php (138)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (133)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/03 00:10:17 [error] [php] Undefined variable: commodity_service_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php:138)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(133): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addProduct
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php (138)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (133)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/03 00:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/add')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/add
+---
+2015/03/03 21:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/show')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/updateService&id=10041
+---
+2015/03/03 21:53:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/show')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/updateService&id=10041
+---
+2015/03/03 22:37:14 [error] [php] Undefined index: comm_is_show (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/showService.php:27)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(43): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionShowService()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/showService
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/showService.php (27)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (43)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/03 23:10:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "showProduct".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('showProduct')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('showProduct')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/showP...')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/showProduct
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/03 23:29:48 [error] [php] Undefined variable: commodity_service_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php:138)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(188): CommodityController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addProduct
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/addService.php (138)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (188)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/03 23:30:29 [error] [php] Undefined variable: commodity_service_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateService.php:134)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(312): CommodityController->renderPartial()
+#2 unknown(0): CommodityController->actionUpdateProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CommodityController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/updateProduct&id=10042
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateService.php (134)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (312)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/04 00:55:51 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.usernmae" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2728): CComponent->__get('usernmae')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(LoginForm), 'usernmae')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(LoginForm), 'usernmae', Array)
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'usernmae', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/login.php(56): CActiveForm->textField(Object(LoginForm), 'usernmae', Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(17): CController->renderPartial('login', Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
+---
+2015/03/04 00:56:22 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.usernmae" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2728): CComponent->__get('usernmae')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(LoginForm), 'usernmae')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(LoginForm), 'usernmae', Array)
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'usernmae', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/login.php(56): CActiveForm->textField(Object(LoginForm), 'usernmae', Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#8 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(17): CController->renderPartial('login', Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
+---

@@ -19,7 +19,15 @@
 <div></div>
 
 <div style="font-size: 13px;margin: 10px 5px">
-	<?php $form = $this->beginWidget('CActiveForm'); ?>
+	<?php $form = $this->beginWidget('CActiveForm', array(
+			'enableClientValidation'=>true,
+			'clientOptions'=>array(
+				'validateOnSubmit'=>true,
+				),
+		)
+	);
+		//$form = $this->beginWidget('CActiveForm');
+	?>
 		<table border="1" width="100%" class="table_a">
 			<tr>
 				<td>

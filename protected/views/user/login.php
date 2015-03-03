@@ -17,27 +17,24 @@
 				<li class="user_top_c"></li>
 				<li class="user_top_r"></li></ul>
 		</dd><dd id="user_main">
-			<?php $form = $this->beginWidget('CActiveForm',
-												array(
-													'enableClientValidation'=>true,
-													'clientOptions'=>array(
-																		'validateOnSubmit'=>true,
-																	),
-												)
-											);
-			?>
-				<ul>
+			<?php $form = $this->beginWidget('CActiveForm');?>
+			<ul>
 					<li class="user_main_l"></li>
 					<li class="user_main_c">
 						<div class="user_main_box">
 							<ul>
 								<li class="user_main_text">用户名： </li>
 								<li class="user_main_input">
-									<input class="TxtUserNameCssClass" id="admin_user" maxlength="20" name="admin_user"> </li></ul>
+									<!--<input class="TxtUserNameCssClass" id="admin_user" maxlength="20" name="admin_user">-->
+									<?php echo $form->textField($user_login,'username',array('size'=>25,'class'=>'TxtUserNameCssClass')); ?>
+									<?php echo $form->error($user_login,'username'); ?>
+								</li></ul>
 							<ul>
 								<li class="user_main_text">密&nbsp;&nbsp;&nbsp;&nbsp;码： </li>
 								<li class="user_main_input">
-									<input class="TxtPasswordCssClass" id="admin_psd" name="admin_psd" type="password">
+									<!--<input class="TxtPasswordCssClass" id="admin_psd" name="admin_psd" type="password">-->
+									<?php echo $form->passwordField($user_login,'password',array('size'=>25,'class'=>'TxtPasswordCssClass')); ?>
+									<?php echo $form->error($user_login,'password'); ?>
 								</li>
 							</ul>
 							<ul>
@@ -54,6 +51,22 @@
 						<input style="border: medium none; background: url('<?php echo BACK_IMG_URL; ?>user_botton.gif') repeat-x scroll left top transparent; height: 122px; width: 111px; display: block; cursor: pointer;" value="" type="submit">
 					</li>
 				</ul>
+			<!--<table align="left" border="0" cellpadding="3" cellspacing="5" width="100%">
+				<tbody>
+					<tr>
+						<td align="right" width="20%"><?php //echo $form->labelEx($user_login,'username'); ?></td>
+						<td width="80%">
+							<?php //echo $form->textField($user_login,'username',array('size'=>25,'class'=>'inputBg')); ?>
+						</td>
+					</tr>
+					<tr>
+						<td align="right"><?php //echo $form->labelEx($user_login,'password'); ?></td>
+						<td width="85%">
+							<?php //echo $form->textField($user_login,'password',array('size'=>15,'class'=>'inputBg')); ?>
+						</td>
+					</tr>
+				</tbody>
+			</table>-->
 			<?php $this->endWidget(); ?>
 		</dd><dd id="user_bottom">
 			<ul>

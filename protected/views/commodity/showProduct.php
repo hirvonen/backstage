@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-	<title>商品列表</title>
+	<title>服务列表</title>
 
 	<link href="<?php echo BACK_CSS_URL; ?>mine.css" type="text/css" rel="stylesheet" />
 </head>
@@ -23,27 +23,43 @@
 <div class="div_search">
             <span>
                 <?php $form = $this->beginWidget('CActiveForm'); ?>
+	            <?php
+	            if(isset($_POST["comm_is_show"])) {
+		            $select_show = $_POST["comm_is_show"];
+	            }
+	            else {
+		            $select_show = 2;
+	            }
+	            if(isset($_POST["comm_is_hot"])){
+		            $select_hot = $_POST["comm_is_hot"];
+	            }
+	            else{
+		            $select_hot = 2;
+	            }
+
+	            ?>
 	            显示<select name="comm_is_show" style="width: 100px;">
-		                <option selected="selected" value="2">请选择</option>
-		                <option value="1">显示</option>
-		                <option value="0">未显示</option>
-	                </select>
+		            <option <?php
+		            if( $select_show == 2 ) echo " selected="."'"."selected"."' ";
+		            ?> value="2">全部</option>
+		            <option <?php
+		            if( $select_show == 1 ) echo " selected="."'"."selected"."' ";
+		            ?> value="1">显示</option>
+		            <option <?php
+		            if( $select_show == 0 ) echo " selected="."'"."selected"."' ";
+		            ?> value="0">未显示</option>
+	            </select>
                 热门<select name="comm_is_hot" style="width: 100px;">
-		                <option selected="selected" value="2">请选择</option>
-		                <option value="1">热门</option>
-		                <option value="0">非热门</option>
-	                </select>
-	                <?php
-	                    /*foreach ($commodity_info as $_v) {
-		                    echo $form->label($_v,"商品种别");
-		                    echo $form->dropDownList($_v, 'comm_kind', array('请选择','商品', '服务'));
-		                    echo $form->label($_v,"显示");
-		                    echo $form->dropDownList($_v, 'comm_is_show', array('请选择','显示', '未显示'));
-		                    echo $form->label($_v,"热门");
-		                    echo $form->dropDownList($_v, 'comm_is_hot', array('请选择','热门', '非热门'));
-		                    break;
-	                    }*/
-	                ?>
+		            <option <?php
+		            if( $select_hot == 2 ) echo " selected="."'"."selected"."' ";
+		            ?> value="2">全部</option>
+		            <option <?php
+		            if( $select_hot == 1 ) echo " selected="."'"."selected"."' ";
+		            ?> value="1">热门</option>
+		            <option <?php
+		            if( $select_hot == 0 ) echo " selected="."'"."selected"."' ";
+		            ?> value="0">非热门</option>
+	            </select>
 	                <input value="查询" type="submit" />
 	            <?php $this->endWidget(); ?>
             </span>
@@ -66,13 +82,13 @@
 			<td>介绍3</td>
 			<td>介绍4</td>
 			<td>介绍5</td>
-			<td>热门商品</td>
+			<td>热门</td>
 			<td>是否显示</td>
 			<td>排序</td>
 		</tr>
 		<?php
 		foreach ($commodity_info as $_v) {
-		?>
+			?>
 			<tr id="product1">
 				<td><a href="./index.php?r=commodity/updateProduct&id=<?php echo $_v->pk_comm_id ?>">修改</a></td>
 				<td><?php echo $_v->pk_comm_id ?></td>
@@ -97,20 +113,20 @@
 				<td><?php echo $_v->comm_intro4; ?></a></td>
 				<td><?php echo $_v->comm_intro5; ?></a></td>
 				<td><?php
-						if($_v->comm_is_hot == 1) {
-							echo "是";
-						}
-						else{
-							echo "否";
-						}
+					if($_v->comm_is_hot == 1) {
+						echo "是";
+					}
+					else{
+						echo "否";
+					}
 					?></a></td>
 				<td><?php
-						if($_v->comm_is_show == 1) {
-							echo "是";
-						}
-						else{
-							echo "否";
-						}
+					if($_v->comm_is_show == 1) {
+						echo "是";
+					}
+					else{
+						echo "否";
+					}
 					?></a></td>
 				<td><?php echo $_v->comm_sort_order; ?></a></td>
 				<td>
