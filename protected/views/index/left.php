@@ -24,6 +24,7 @@
 <table height="100%" cellspacing=0 cellpadding=0 width=170
        background=<?php echo BACK_IMG_URL; ?>menu_bg.jpg border=0>
 	<tr>
+		<?php if(!Yii::app()->user->getIsGuest()){ ?>
 		<td valign=top align=middle>
 			<table cellspacing=0 cellpadding=0 width="100%" border=0>
 
@@ -323,6 +324,11 @@
 					       href="http://www.865171.cn"
 					       target=_top>退出系统</a></td></tr></table></td>
 		<td width=1 bgcolor=#d1e6f7></td>
+		<?php
+			}else {
+				echo "尚未登录";
+			}
+		?>
 	</tr>
 </table>
 </body>

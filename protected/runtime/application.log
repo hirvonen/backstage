@@ -2061,3 +2061,37 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
 ---
+2015/03/05 00:15:31 [error] [php] Trying to get property of non-object (/Users/alfredzhang/Sites/yii_learn/backstage/protected/components/UserIdentity.php:26)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(21): LoginForm->validate()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): UserController->runAction()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/components/UserIdentity.php (26)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/models/LoginForm.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (21)
+2015/03/05 00:15:42 [error] [php] Trying to get property of non-object (/Users/alfredzhang/Sites/yii_learn/backstage/protected/components/UserIdentity.php:26)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(21): LoginForm->validate()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(286): UserController->runAction()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/login
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/components/UserIdentity.php (26)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/models/LoginForm.php (55)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (21)

@@ -26,7 +26,7 @@ class LoginForm extends CFormModel
 			array('password', 'required', 'message'=>'密码必填'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
-			// password needs to be authenticated
+			// 校验用户名密码的真实性，通过自定义方法实现校验
 			array('password', 'authenticate'),
 		);
 	}
@@ -53,7 +53,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('password','错误的用户名或密码');
 		}
 	}
 

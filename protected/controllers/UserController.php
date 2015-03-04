@@ -18,13 +18,24 @@ class UserController extends Controller
 			//收集表单信息
 			$user_login->attributes = $_POST['LoginForm'];
 
-			if($user_login->validate()){
-				echo "login success";
+			//校验数据，最终走的是rules()方法
+			if($user_login->validate() && $user_login->login()){
+				$this->redirect('./index.php?r=index/index');
 			}
 
 		}
 
 		$this->renderPartial("login",array('user_login'=>$user_login));
+	}
+
+	/**
+	 * 用户退出系统，删除session信息
+	 */
+	public function actionLogout()
+	{
+		Yii::app()->session->clear();
+		Yii::app()->session->destroy();
+		$this->redirect('./index.php?r=user/login');
 	}
 
 	/**
@@ -100,7 +111,8 @@ class UserController extends Controller
 		$user_model = User::model();
 		$user_info = $user_model->findByPk($id);
 		$user_info->usr_password = md5("xyz123456");
-		echo "<script>alert('用户密码已被初始化为“xyz123456”。请尽快登录修改密码。');</script>";
+		if($user_info->save())
+			echo "<script>alert('用户密码已被初始化为“xyz123456”。请尽快登录修改密码。');</script>";
 		//$this->redirect('./index.php?r=user/show');
 	}
 }
