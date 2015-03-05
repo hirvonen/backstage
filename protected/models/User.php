@@ -6,6 +6,10 @@
  */
 class User extends CActiveRecord
 {
+	public $user_chg_pwd_old;
+	public $user_chg_pwd_new;
+	public $user_chg_pwd_new_cfm;
+
 	/**
 	 * 创建模型对象
 	 * @param string $className
@@ -38,6 +42,9 @@ class User extends CActiveRecord
 			'usr_last_login'=>'最后登录时间',
 			'usr_status'=>'用户状态',
 			'usr_pic_id'=>'用户头像',
+			'user_chg_pwd_old'=>'现在密码',
+			'user_chg_pwd_new'=>'新密码',
+			'user_chg_pwd_new_cfm'=>'确认新密码',
 		);
 	}
 }

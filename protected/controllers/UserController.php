@@ -7,6 +7,41 @@
 class UserController extends Controller
 {
 	/**
+	 * 用户访问过滤
+	 */
+	public function filters(){
+		return array(
+			'accessControl',
+		);
+	}
+
+	/**
+	 * 为具体方法设置具体访问条件
+	 * * 全部用户(无论登录与否)
+	 * ? 匿名用户
+	 * 用户名 具体用户
+	 * @ 登录用户
+	 */
+	public function accessRules(){
+		return array(
+			array(
+				'allow',
+				'actions'=>array('del','detail','initPassword','logout','show','chgpwd'),
+				'users'=>array('@'),
+			),
+			array(
+				'allow',
+				'actions'=>array('login'),
+				'users'=>array('*'),
+			),
+			array(
+				'deny',
+				'users'=>array('*'),
+			),
+		);
+	}
+
+	/**
 	 * 登陆
 	 * @throws CException
 	 */
@@ -114,5 +149,24 @@ class UserController extends Controller
 		if($user_info->save())
 			echo "<script>alert('用户密码已被初始化为“xyz123456”。请尽快登录修改密码。');</script>";
 		//$this->redirect('./index.php?r=user/show');
+	}
+
+	/**
+	 * 更改用户密码
+	 */
+	public function actionChgPwd($username)
+	{
+		if(isset($_POST['user'])){
+			//验证旧密码
+			//验证新密码
+			//保存新密码
+
+		}
+
+		$user_model = User::model();
+		$user_info = $user_model->findByAttributes(array('usr_username'=>$username));
+		if(isset($user_info)){
+			$this->renderPartial("chgpwd",array('user_info'=>$user_info));
+		}
 	}
 }

@@ -42,12 +42,20 @@
 								</li>
 							</ul>
 							<ul>
+								<li class="user_main_text">
+									<?php echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$form->checkBox($user_login,'rememberMe'); ?>
+								</li>
+								<li class="user_main_input">
+									<?php echo $form->labelEx($user_login,'rememberMe'); ?>
+								</li>
+							</ul>
+							<!--<ul>
 								<li class="user_main_text">验证码： </li>
 								<li class="user_main_input">
 									<input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
 									<img src="<?php echo BACK_IMG_URL; ?>admin.png"  alt="" />
 								</li>
-							</ul>
+							</ul>-->
 						</div>
 					</li>
 					<li class="user_main_r">

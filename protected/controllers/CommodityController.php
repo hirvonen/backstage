@@ -7,6 +7,36 @@
 class CommodityController extends Controller
 {
 	/**
+	 * 用户访问过滤
+	 */
+	public function filters(){
+		return array(
+			'accessControl',
+		);
+	}
+
+	/**
+	 * 为具体方法设置具体访问条件
+	 * * 全部用户(无论登录与否)
+	 * ? 匿名用户
+	 * 用户名 具体用户
+	 * @ 登录用户
+	 */
+	public function accessRules(){
+		return array(
+			array(
+				'allow',
+				'actions'=>array('addProduct','addService','delProduct','delService','showProduct','showService','updateProduct','updateService'),
+				'users'=>array('@'),
+			),
+			array(
+				'deny',
+				'users'=>array('*'),
+			),
+		);
+	}
+
+	/**
 	 * 服务一览
 	 * @throws CException
 	 */
@@ -368,13 +398,5 @@ class CommodityController extends Controller
 				echo "<script>alert('".$commodity_info->comm_name." 删除失败');</script>";
 			}
 		}
-	}
-
-	/**
-	 * 商品筛选
-	 */
-	public function actionFilter()
-	{
-		echo "success";
 	}
 }
