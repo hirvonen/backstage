@@ -47,4 +47,28 @@ class User extends CActiveRecord
 			'user_chg_pwd_new_cfm'=>'确认新密码',
 		);
 	}
+
+	/**
+	 * 商品添加表单验证规则
+	 */
+	public function rules()
+	{
+		return array(
+			array('user_chg_pwd_old','required','message'=>'现在密码必填'),
+			array('user_chg_pwd_new','required','message'=>'新密码必填'),
+			array('user_chg_pwd_new_cfm','required','message'=>'新密码确认必填'),
+			array('user_chg_pwd_new_cfm','compare','compareAttribute'=>'user_chg_pwd_new','message'=>'两次新密码不一致！'),
+			array('user_chg_pwd_new','rules_not_equal'),
+		);
+	}
+
+	/**
+	 * @param $attribute
+	 * 自定义验证规则
+	 */
+	public function rules_not_equal($attribute){
+		if($this->user_chg_pwd_old === $this->user_chg_pwd_new){
+			$this->addError($attribute, '新旧密码不能一样！');
+		}
+	}
 }

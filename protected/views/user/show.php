@@ -23,11 +23,27 @@
 <div class="div_search">
             <span>
                 <?php $form = $this->beginWidget('CActiveForm'); ?>
+	            <?php
+		            if(isset($_POST["usr_kind"])) {
+			            $select_kind = $_POST["usr_kind"];
+		            }
+		            else {
+			            $select_kind = 0;
+		            }
+	            ?>
 	            种别<select name="usr_kind" style="width: 100px;">
-		            <option selected="selected" value="0">请选择</option>
-		            <option value="1">管理员</option>
-		            <option value="2">顾客</option>
-		            <option value="3">理疗师</option>
+		            <option <?php
+		            if( $select_kind == 0 ) echo " selected="."'"."selected"."' ";
+		            ?> value="0">全部</option>
+		            <option <?php
+		            if( $select_kind == 1 ) echo " selected="."'"."selected"."' ";
+		            ?> value="1">管理员</option>
+		            <option <?php
+		            if( $select_kind == 2 ) echo " selected="."'"."selected"."' ";
+		            ?> value="2">顾客</option>
+		            <option <?php
+		            if( $select_kind == 3 ) echo " selected="."'"."selected"."' ";
+		            ?> value="3">理疗师</option>
 	            </select>
 	                <input value="查询" type="submit" />
 	            <?php $this->endWidget(); ?>

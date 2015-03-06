@@ -114,8 +114,45 @@ class UserController extends Controller
 	{
 		$user_model = User::model();
 		$user_info = $user_model->findByPk($id);
-
-		$this->renderPartial('Detail',array("user_info"=>$user_info));
+		if(isset($user_info)){
+			switch($user_info->usr_kind){
+				case 0:
+					//管理员详细信息
+					$admin_model = Admin::model();
+					$admin_info = $admin_model->findByPk($id);
+					if(isset($admin_info)){
+						$this->renderPartial('Detail',array("user_info"=>$user_info,"admin_info"=>$admin_info));
+					}
+					else{
+						echo "<script>alert('tbl_admin表中未找到该用户！');</script>";
+					}
+					break;
+				case 1:
+					//理疗师详细信息
+					$beautician_model = Beautician::model();
+					$beautician_info = $beautician_model->findByPk($id);
+					if(isset($beautician_info)){
+						$this->renderPartial('Detail',array("user_info"=>$user_info,"beautician_info"=>$beautician_info));
+					}
+					else{
+						echo "<script>alert('tbl_beautician表中未找到该用户！');</script>";
+					}
+					break;
+				case 2:
+					//顾客详细信息
+					$customer_model = Customer::model();
+					$customer_info = $customer_model->findByPk($id);
+					if(isset($customer_info)){
+						$this->renderPartial('Detail',array("user_info"=>$user_info,"customer_info"=>$customer_info));
+					}
+					else{
+						echo "<script>alert('tbl_customer表中未找到该用户！');</script>";
+					}
+					break;
+				default:
+					break;
+			}
+		}
 	}
 
 	/**
@@ -146,26 +183,49 @@ class UserController extends Controller
 		$user_model = User::model();
 		$user_info = $user_model->findByPk($id);
 		$user_info->usr_password = md5("xyz123456");
-		if($user_info->save())
+
+		$user_info->user_chg_pwd_old = "oldpassword";
+		$user_info->user_chg_pwd_new = "newpassword";
+		$user_info->user_chg_pwd_new_cfm = "newpassword";
+
+		if($user_info->save()) {
 			echo "<script>alert('用户密码已被初始化为“xyz123456”。请尽快登录修改密码。');</script>";
-		//$this->redirect('./index.php?r=user/show');
-	}
+		}
+		else {
+			echo "<script>alert('密码修改失败！');</script>";
+		}
+		$this->renderPartial('Detail',array("user_info"=>$user_info));	}
 
 	/**
 	 * 更改用户密码
 	 */
 	public function actionChgPwd($username)
 	{
-		if(isset($_POST['user'])){
-			//验证旧密码
-			//验证新密码
-			//保存新密码
-
-		}
-
 		$user_model = User::model();
 		$user_info = $user_model->findByAttributes(array('usr_username'=>$username));
 		if(isset($user_info)){
+			if(isset($_POST['User'])){
+				//验证旧密码
+				if($user_info->usr_password === md5($_POST['User']['user_chg_pwd_old'])){
+					//验证新密码
+					$user_info->usr_password = md5($_POST['User']['user_chg_pwd_new_cfm']);
+
+					$user_info->user_chg_pwd_old = $_POST['User']['user_chg_pwd_old'];
+					$user_info->user_chg_pwd_new = $_POST['User']['user_chg_pwd_new'];
+					$user_info->user_chg_pwd_new_cfm = $_POST['User']['user_chg_pwd_new_cfm'];
+
+					//保存新密码
+					if($user_info->save()) {
+						$this->redirect('./index.php?r=index/index');
+					}
+					else {
+						echo "<script>alert('密码修改失败！');</script>";
+					}
+				}
+				else {
+					echo "<script>alert('现在密码填写错误！');</script>";
+				}
+			}
 			$this->renderPartial("chgpwd",array('user_info'=>$user_info));
 		}
 	}

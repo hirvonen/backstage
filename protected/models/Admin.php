@@ -24,4 +24,11 @@ class Admin extends CActiveRecord
 	{
 		return '{{admin}}';
 	}
+
+	public function attributeLabels()
+	{
+		return array(
+			'adm_level'=>'管理员级别',
+		);
+	}
 }

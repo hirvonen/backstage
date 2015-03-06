@@ -28,7 +28,7 @@
 		<td style="font-weight: bold; color: #fff; padding-top: 20px"
 		    align=middle>当前用户：<?php echo Yii::app()->user->name; ?> &nbsp;&nbsp; <a style="color: #fff"
 		                                            href="./index.php?r=user/chgpwd&username=<?php echo Yii::app()->user->name; ?>"
-		                                            target=main>修改口令</a> &nbsp;&nbsp; <a style="color: #fff"
+		                                            target=main>修改密码</a> &nbsp;&nbsp; <a style="color: #fff"
 		                                                                                 onclick="if (confirm('确定要退出吗？')) return true; else return false;"
 		                                                                                 href="./index.php?r=user/logout" target=_top>退出系统</a>
 		</td>

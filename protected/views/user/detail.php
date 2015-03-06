@@ -10,9 +10,31 @@
 
 <div class="div_head">
             <span>
-                <span style="float:left">当前位置是：用户管理-》用户详细信息</span>
-                <span style="float:right;margin-right: 8px;font-weight: bold">
+                <span style="float:left">当前位置是：用户管理-》
+	                <?php
+	                    switch( $user_info->usr_kind ){
+		                    case 0:
+								//管理员
+								echo "管理员详细信息";
+			                    break;
+		                    case 1:
+								//理疗师
+								echo "理疗师详细信息";
+			                    break;
+		                    case 2:
+								//顾客
+								echo "顾客详细信息";
+			                    break;
+		                    default:
+								echo "未知详细信息";
+			                    break;
+	                    }
+	                ?></span>
+	            <span style="float:right;margin-right: 8px;font-weight: bold">
                     <a style="text-decoration: none" href="./index.php?r=user/show">【返回】</a>
+                </span>
+	            <span style="float:right;margin-right: 8px;font-weight: bold">
+                    <a style="text-decoration: none" href="./index.php?r=user/update">【修改用户信息】</a>
                 </span>
             </span>
 </div>
@@ -135,15 +157,228 @@
 				<?php echo $form->label($user_info,$user_info->usr_pic_id); ?>
 			</td>
 		</tr>
-
-
 		<tr>
-			<td colspan="2" align="center">
-				<input type="submit" value="修改">
+			<td bgcolor="#6495ed">
+			</td>
+			<td bgcolor="#6495ed">
 			</td>
 		</tr>
+		<?php if($user_info->usr_kind === "0") { ?>
+			<!--显示管理员信息-->
+			<tr>
+				<td>
+					<?php echo $form->label($admin_info, 'adm_level'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($admin_info,$admin_info->adm_level); ?>
+				</td>
+			</tr>
+		<?php
+		}
+		elseif($user_info->usr_kind === "1") {?>
+			<!--显示理疗师信息-->
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_realname'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_realname); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_nickname'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_nickname); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_idcard_id'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_idcard_id); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_level'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_level); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_tel1'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_tel1); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_tel2'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_tel2); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_tel3'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_tel3); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_sex'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_sex); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_birthday'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_birthday); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_email'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_email); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($beautician_info, 'beau_intro'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($beautician_info,$beautician_info->beau_intro); ?>
+				</td>
+			</tr>
+		<?php
+		}
+		elseif($user_info->usr_kind === "2") { ?>
+			<!--显示顾客信息-->
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_level'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_level); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_balance'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_balance); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_point'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_point); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_realname'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_realname); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_mobile1'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_mobile1); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_mobile2'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_mobile2); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_phone'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_phone); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_sex'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_sex); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_birthday'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_birthday); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_email1'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_email1); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_email2'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_email2); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_child_no'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_child_no); ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $form->label($customer_info, 'cust_childbearing_age'); ?>
+				</td>
+				<td>
+					<?php echo $form->label($customer_info,$customer_info->cust_childbearing_age); ?>
+				</td>
+			</tr>
+		<?php
+		}
+		else{ echo "something wrong!"; } ?>
 	</table>
 	<?php $this->endWidget(); ?>
 </div>
+
 </body>
 </html>

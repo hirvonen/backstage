@@ -12,21 +12,27 @@
             <span>
                 <span style="float:left">当前位置是：用户管理-》修改密码</span>
                 <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="./index.php?r=user/show">【返回】</a>
+                    <a style="text-decoration: none" href="./index.php?r=index/index">【返回】</a>
                 </span>
             </span>
 </div>
 <div></div>
 
 <div style="font-size: 13px;margin: 10px 5px">
-	<?php $form = $this->beginWidget('CActiveForm'); ?>
+	<?php $form = $this->beginWidget('CActiveForm', array(
+		'enableClientValidation'=>true,
+		'clientOptions'=>array(
+			'validateOnSubmit'=>true,
+		),
+	)); ?>
 	<table border="1" width="100%" class="table_a">
 		<tr>
 			<td>
 				<?php echo $form->labelEx($user_info, 'user_chg_pwd_old'); ?>
 			</td>
 			<td>
-				<?php echo $form->textField($user_info,'user_chg_pwd_old'); ?>
+				<?php echo $form->passwordField($user_info,'user_chg_pwd_old'); ?>
+				<?php echo $form->error($user_info,'user_chg_pwd_old'); ?>
 			</td>
 		</tr>
 		<tr>
@@ -34,7 +40,8 @@
 				<?php echo $form->labelEx($user_info, 'user_chg_pwd_new'); ?>
 			</td>
 			<td>
-				<?php echo $form->textField($user_info,'user_chg_pwd_new'); ?>
+				<?php echo $form->passwordField($user_info,'user_chg_pwd_new'); ?>
+				<?php echo $form->error($user_info,'user_chg_pwd_new'); ?>
 			</td>
 		</tr>
 		<tr>
@@ -42,7 +49,8 @@
 				<?php echo $form->labelEx($user_info, 'user_chg_pwd_new_cfm'); ?>
 			</td>
 			<td>
-				<?php echo $form->textField($user_info,'user_chg_pwd_new_cfm'); ?>
+				<?php echo $form->passwordField($user_info,'user_chg_pwd_new_cfm'); ?>
+				<?php echo $form->error($user_info,'user_chg_pwd_new_cfm'); ?>
 			</td>
 		</tr>
 		<tr>
