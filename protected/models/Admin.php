@@ -31,4 +31,14 @@ class Admin extends CActiveRecord
 			'adm_level'=>'管理员级别',
 		);
 	}
+
+	/**
+	 * 商品添加表单验证规则
+	 */
+	public function rules()
+	{
+		return array(
+			array('adm_level','required','message'=>'管理员级别必选！'),
+		);
+	}
 }

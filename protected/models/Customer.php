@@ -43,4 +43,22 @@ class Customer extends CActiveRecord
 			'cust_childbearing_age'=>'最近一次生育年龄',
 		);
 	}
+
+	/**
+	 * 商品添加表单验证规则
+	 */
+	public function rules()
+	{
+		return array(
+			array('cust_level','required','message'=>'顾客级别必填！'),
+			array('cust_balance','required','message'=>'顾客账户余额必填！'),
+			array('cust_point','required','message'=>'顾客积分必填！'),
+			array('cust_mobile1,cust_mobile2','match','pattern'=>'/^1\d{10}$/','message'=>'手机号码形式不正确！'),
+			array('cust_phone','match','pattern'=>'/^0\d{2,3}-?\d{7,8}$/','message'=>'座机号码形式不正确！请以区号-号码的形式填写'),
+			array('cust_birthday','match','pattern'=>'/^[1-2][\d]{3}\-(0\d|1[0-2])\-([0-2]\d|3[0-1])$/','message'=>'生日形式不正确！'),
+			array('cust_email1,cust_email2','match','pattern'=>'/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/','message'=>'电子邮件形式不正确！'),
+			array('cust_child_no,cust_childbearing_age','match','pattern'=>'/^[0-9]\d*$/','message'=>'此处必须填写数字！（可以为0）'),
+			array('cust_realname,cust_sex','safe'),
+		);
+	}
 }

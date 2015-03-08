@@ -49,7 +49,7 @@ class User extends CActiveRecord
 	}
 
 	/**
-	 * 商品添加表单验证规则
+	 * 表单验证规则
 	 */
 	public function rules()
 	{
@@ -59,6 +59,8 @@ class User extends CActiveRecord
 			array('user_chg_pwd_new_cfm','required','message'=>'新密码确认必填'),
 			array('user_chg_pwd_new_cfm','compare','compareAttribute'=>'user_chg_pwd_new','message'=>'两次新密码不一致！'),
 			array('user_chg_pwd_new','rules_not_equal'),
+			array('usr_username','unique','message'=>'该用户名已被使用！请换一个用户名！'),
+			array('pk_usr_id,usr_kind,usr_reg_kind,usr_open_id,usr_password,usr_create_time,usr_last_login,usr_status,usr_pic_id','safe'),
 		);
 	}
 

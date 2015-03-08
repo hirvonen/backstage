@@ -182,7 +182,7 @@ class CommodityController extends Controller
 			$commodity_product_model->attributes = $_POST["Commodity_Product"];
 
 			//DB内的值为1和2，网页上的值为0和1
-			$commodity_model->comm_kind = 1;
+			$commodity_model->comm_kind = 2;
 
 			//如果商品为表示的，则认定商品已经上架
 			if($commodity_model->comm_is_show == 1) {
@@ -193,7 +193,7 @@ class CommodityController extends Controller
 			if($commodity_model->save()) {
 				//页面重定向
 				//Commodity_service的表单主键设置
-				$commodity_product_model->pk_serv_id = $commodity_model->pk_comm_id;
+				$commodity_product_model->pk_prod_id = $commodity_model->pk_comm_id;
 				if($commodity_product_model->save()) {
 					$this->redirect('./index.php?r=commodity/showProduct');
 				}
@@ -309,7 +309,7 @@ class CommodityController extends Controller
 			$commodity_info->attributes = $_POST["Commodity"];
 			$commodity_product_info->attributes = $_POST["Commodity_Product"];
 
-			$commodity_info->comm_kind = 1;
+			$commodity_info->comm_kind = 2;
 
 			//修改时间
 			$commodity_info->comm_update_time = date("Y-m-d H:i:s",time());

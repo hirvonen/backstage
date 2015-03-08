@@ -2580,3 +2580,1299 @@ Stack trace:
 REQUEST_URI=/yii_learn/backstage/index.php?r=user/update
 HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/detail&id=1000006
 ---
+2015/03/07 14:21:48 [error] [exception.CException] exception 'CException' with message 'Property "Commodity_Product.pk_serv_id" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(161): CComponent->__set('pk_serv_id', '10047')
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(196): CActiveRecord->__set('pk_serv_id', '10047')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('addProduct')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/addPr...')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addProduct
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/addProduct
+---
+2015/03/07 14:24:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_commodity_product`, CONSTRAINT `fk_prod_brand` FOREIGN KEY (`prod_brand_id`) REFERENCES `tbl_brand` (`pk_brand_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_commodity_product` (`prod_stock`, `prod_kind`, `prod_brand_id`, `pk_prod_id`) VALUES (:yp0, :yp1, :yp2, :yp3). Bound with :yp0=999999, :yp1=1, :yp2='eyoung', :yp3='10048'.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (197)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/07 14:24:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_commodity_product`, CONSTRAINT `fk_prod_brand` FOREIGN KEY (`prod_brand_id`) REFERENCES `tbl_brand` (`pk_brand_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_commodity_product` (`prod_stock`, `prod_kind`, `prod_brand_id`, `pk_prod_id`) VALUES (:yp0, :yp1, :yp2, :yp3). Bound with :yp0=999999, :yp1=1, :yp2='eyoung', :yp3='10048'' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(197): CActiveRecord->save()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): CommodityController->actionAddProduct()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('addProduct')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/addPr...')
+#14 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/addProduct
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/addProduct
+---
+2015/03/07 14:32:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`eyoungdb`.`tbl_commodity_product`, CONSTRAINT `fk_prod_comm` FOREIGN KEY (`pk_prod_id`) REFERENCES `tbl_commodity` (`pk_comm_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `tbl_commodity` WHERE `tbl_commodity`.`pk_comm_id`='10049'.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (365)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/07 14:32:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`eyoungdb`.`tbl_commodity_product`, CONSTRAINT `fk_prod_comm` FOREIGN KEY (`pk_prod_id`) REFERENCES `tbl_commodity` (`pk_comm_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `tbl_commodity` WHERE `tbl_commodity`.`pk_comm_id`='10049'' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1807): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1227): CActiveRecord->deleteByPk('10049')
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(365): CActiveRecord->delete()
+#3 [internal function]: CommodityController->actionDelService('10049')
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(CommodityController), Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CommodityController), Object(ReflectionMethod), Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('delService')
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/delSe...')
+#16 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/delService&id=10049
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/showService
+---
+2015/03/07 14:43:11 [error] [php] Undefined variable: customer_info (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Detail.php:274)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): UserController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(150): UserController->renderPartial()
+#2 unknown(0): UserController->actionDetail()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/detail&id=1000013
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Detail.php (274)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (150)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/07 14:44:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('update')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/detail&id=1000013
+---
+2015/03/07 15:46:12 [error] [php] Undefined variable: customer_info (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Detail.php:274)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): UserController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(199): UserController->renderPartial()
+#2 unknown(0): UserController->actionInitPassword()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/initPassword&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Detail.php (274)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (199)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/07 16:00:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:336
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('initPassword')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/initPasswo...')
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/initPassword&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/detail&id=1000012
+---
+2015/03/07 16:06:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/alfredzhang/Sites/yii_learn/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/detail&id=1000012
+---
+2015/03/07 16:07:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/alfredzhang/Sites/yii_learn/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/detail&id=1000012
+---
+2015/03/07 22:34:27 [error] [php] Undefined variable: deal (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateProduct.php:125)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(342): CommodityController->renderPartial()
+#2 unknown(0): CommodityController->actionUpdateProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CommodityController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CommodityController->filterAccessControl()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/updateProduct&id=10013
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateProduct.php (125)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (342)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/07 22:34:34 [error] [php] Undefined variable: deal (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateProduct.php:125)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CommodityController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(342): CommodityController->renderPartial()
+#2 unknown(0): CommodityController->actionUpdateProduct()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CommodityController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CommodityController->filterAccessControl()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CommodityController->runActionWithFilters()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CommodityController->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/updateProduct&id=10014
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateProduct.php (125)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php (342)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/07 22:39:24 [error] [exception.CException] exception 'CException' with message 'Property "Commodity.visit_time" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(145): CComponent->__get('visit_time')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2728): CActiveRecord->__get('visit_time')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(Commodity), 'visit_time')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Commodity), 'visit_time', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/zii/widgets/jui/CJuiDatePicker.php(84): CHtml::activeTextField(Object(Commodity), 'visit_time', Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(181): CJuiDatePicker->run()
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateProduct.php(54): CBaseController->widget('zii.widgets.jui...', Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(342): CController->renderPartial('UpdateProduct', Array)
+#11 [internal function]: CommodityController->actionUpdateProduct('10050')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(CommodityController), Array)
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CommodityController), Object(ReflectionMethod), Array)
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#21 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('updateProduct')
+#23 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/updat...')
+#24 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#25 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/updateProduct&id=10050
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/showProduct
+---
+2015/03/07 22:40:18 [error] [exception.CException] exception 'CException' with message 'Property "Commodity.visit_time" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(145): CComponent->__get('visit_time')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2728): CActiveRecord->__get('visit_time')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2451): CHtml::resolveValue(Object(Commodity), 'visit_time')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Commodity), 'visit_time', Array)
+#4 /Users/alfredzhang/Sites/yii_learn/framework/zii/widgets/jui/CJuiDatePicker.php(84): CHtml::activeTextField(Object(Commodity), 'visit_time', Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(181): CJuiDatePicker->run()
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/commodity/UpdateProduct.php(54): CBaseController->widget('zii.widgets.jui...', Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/CommodityController.php(342): CController->renderPartial('UpdateProduct', Array)
+#11 [internal function]: CommodityController->actionUpdateProduct('10050')
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(CommodityController), Array)
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(CommodityController), Object(ReflectionMethod), Array)
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#21 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('updateProduct')
+#23 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('commodity/updat...')
+#24 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#25 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=commodity/updateProduct&id=10050
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=commodity/showProduct
+---
+2015/03/08 00:00:23 [error] [php] Undefined index: user (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php:300)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:01:19 [error] [php] Missing argument 2 for CActiveRecord::setAttribute(), called in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php on line 152 and defined (/Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php:710)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(300): User->__set()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(284): UserController->updateCustomer()
+#2 unknown(0): UserController->actionUpdate()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "usr_reg_kind" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "usr_open_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "usr_username" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "usr_pic_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:35 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "usr_reg_kind" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "usr_open_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "usr_username" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "usr_pic_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:02:59 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "usr_reg_kind" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "usr_open_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "usr_username" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "usr_pic_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:03:57 [error] [php] Array to string conversion (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php:307)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "usr_reg_kind" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "usr_open_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "usr_username" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "usr_pic_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (300)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (301)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:04:08 [error] [php] Array to string conversion (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php:307)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "usr_reg_kind" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (306)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "usr_open_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (306)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "usr_username" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (306)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "usr_pic_id" of "User".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (306)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:11:28 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:18:38 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_level" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_balance" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_point" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_realname" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_mobile1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_mobile2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_phone" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_sex" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_birthday" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_email1" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_email2" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_child_no" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:19:47 [warning] [application] Failed to set unsafe attribute "cust_childbearing_age" of "Customer".
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:30:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000012'. Bound with :yp0='1000012', :yp1=2, :yp2=0, :yp3='112', :yp4='aaaa', :yp5='b837c31b8698ad184637ea91c3f537ab', :yp6='2015-02-20 17:24:48', :yp7='2015-02-21 21:14:27', :yp8=100, :yp9='a/a/a/a/a/a.jpg'.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (319)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:30:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000012'. Bound with :yp0='1000012', :yp1=2, :yp2=0, :yp3='112', :yp4='aaaa', :yp5='b837c31b8698ad184637ea91c3f537ab', :yp6='2015-02-20 17:24:48', :yp7='2015-02-21 21:14:27', :yp8=100, :yp9='a/a/a/a/a/a.jpg'' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1753): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1127): CActiveRecord->updateByPk('1000012', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->update(NULL)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(319): CActiveRecord->save()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(284): UserController->updateCustomer('1000012')
+#5 [internal function]: UserController->actionUpdate('1000012')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#20 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/update&id=1000012
+---
+2015/03/08 00:31:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000012'. Bound with :yp0='1000012', :yp1=2, :yp2=0, :yp3='9s9s9s9s9s', :yp4='aaaa', :yp5='b837c31b8698ad184637ea91c3f537ab', :yp6='2015-02-20 17:24:48', :yp7='2015-02-21 21:14:27', :yp8=100, :yp9=''.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (319)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:31:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000012'. Bound with :yp0='1000012', :yp1=2, :yp2=0, :yp3='9s9s9s9s9s', :yp4='aaaa', :yp5='b837c31b8698ad184637ea91c3f537ab', :yp6='2015-02-20 17:24:48', :yp7='2015-02-21 21:14:27', :yp8=100, :yp9=''' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1753): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1127): CActiveRecord->updateByPk('1000012', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->update(NULL)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(319): CActiveRecord->save()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(284): UserController->updateCustomer('1000012')
+#5 [internal function]: UserController->actionUpdate('1000012')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#20 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/update&id=1000012
+---
+2015/03/08 00:32:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000012'. Bound with :yp0='1000012', :yp1=2, :yp2=0, :yp3='', :yp4='aaaa', :yp5='b837c31b8698ad184637ea91c3f537ab', :yp6='2015-02-20 17:24:48', :yp7='2015-02-21 21:14:27', :yp8=100, :yp9=''.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (319)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 00:32:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000012'. Bound with :yp0='1000012', :yp1=2, :yp2=0, :yp3='', :yp4='aaaa', :yp5='b837c31b8698ad184637ea91c3f537ab', :yp6='2015-02-20 17:24:48', :yp7='2015-02-21 21:14:27', :yp8=100, :yp9=''' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1753): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1127): CActiveRecord->updateByPk('1000012', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->update(NULL)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(319): CActiveRecord->save()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(284): UserController->updateCustomer('1000012')
+#5 [internal function]: UserController->actionUpdate('1000012')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#20 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/update&id=1000012
+---
+2015/03/08 14:14:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/show
+---
+2015/03/08 14:21:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000008'. Bound with :yp0='1000008', :yp1=2, :yp2=1, :yp3='', :yp4='rockingzl', :yp5='e10adc3949ba59abbe56e057f20f883e', :yp6='2015-02-16 10:19:13', :yp7='2015-02-16 10:19:13', :yp8=100, :yp9=''.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (307)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 14:21:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_user`, CONSTRAINT `fk_usr_image` FOREIGN KEY (`usr_pic_id`) REFERENCES `tbl_image` (`pk_img_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: UPDATE `tbl_user` SET `pk_usr_id`=:yp0, `usr_kind`=:yp1, `usr_reg_kind`=:yp2, `usr_open_id`=:yp3, `usr_username`=:yp4, `usr_password`=:yp5, `usr_create_time`=:yp6, `usr_last_login`=:yp7, `usr_status`=:yp8, `usr_pic_id`=:yp9 WHERE `tbl_user`.`pk_usr_id`='1000008'. Bound with :yp0='1000008', :yp1=2, :yp2=1, :yp3='', :yp4='rockingzl', :yp5='e10adc3949ba59abbe56e057f20f883e', :yp6='2015-02-16 10:19:13', :yp7='2015-02-16 10:19:13', :yp8=100, :yp9=''' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1753): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1127): CActiveRecord->updateByPk('1000008', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->update(NULL)
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(307): CActiveRecord->save()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(284): UserController->updateCustomer('1000008')
+#5 [internal function]: UserController->actionUpdate('1000008')
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('update')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#18 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#20 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000008
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/update&id=1000008
+---
+2015/03/08 15:10:49 [error] [php] Missing argument 2 for CActiveForm::dropDownList(), called in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Update.php on line 78 and defined (/Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php:912)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): UserController->renderInternal()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): UserController->renderFile()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(325): UserController->renderPartial()
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(284): UserController->updateCustomer()
+#4 unknown(0): UserController->actionUpdate()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#18 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/update&id=1000012
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Update.php (78)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (325)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (284)
+2015/03/08 15:30:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/alfredzhang/Sites/yii_learn/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step1')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step1')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step1
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/show
+---
+2015/03/08 15:31:17 [error] [php] Undefined variable: user_info (/Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/add_step1.php:34)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): UserController->renderFile()
+#1 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(397): UserController->renderPartial()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(49): UserController->actionAdd_step1()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step1
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/add_step1.php (34)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (397)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 15:32:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:336
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&kind=1
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step1
+---
+2015/03/08 15:52:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:336
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&kind=2
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step1
+---
+2015/03/08 15:52:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:336
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&kind=0
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step1
+---
+2015/03/08 15:55:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:336
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#10 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&kind=0
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step1
+---
+2015/03/08 16:01:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_customer`, CONSTRAINT `fk_customer_user` FOREIGN KEY (`pk_cust_id`) REFERENCES `tbl_user` (`pk_usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_customer` (`cust_level`, `cust_balance`, `cust_point`, `cust_realname`, `cust_mobile1`, `cust_mobile2`, `cust_phone`, `cust_sex`, `cust_birthday`, `cust_email1`, `cust_email2`, `cust_child_no`, `cust_childbearing_age`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12). Bound with :yp0=1, :yp1='0.00', :yp2=0, :yp3='测试1', :yp4='13761532239', :yp5='', :yp6='', :yp7='女', :yp8='', :yp9='', :yp10='', :yp11=NULL, :yp12=NULL.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (523)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (414)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 16:01:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_customer`, CONSTRAINT `fk_customer_user` FOREIGN KEY (`pk_cust_id`) REFERENCES `tbl_user` (`pk_usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_customer` (`cust_level`, `cust_balance`, `cust_point`, `cust_realname`, `cust_mobile1`, `cust_mobile2`, `cust_phone`, `cust_sex`, `cust_birthday`, `cust_email1`, `cust_email2`, `cust_child_no`, `cust_childbearing_age`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12). Bound with :yp0=1, :yp1='0.00', :yp2=0, :yp3='测试1', :yp4='13761532239', :yp5='', :yp6='', :yp7='女', :yp8='', :yp9='', :yp10='', :yp11=NULL, :yp12=NULL' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(523): CActiveRecord->save()
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(414): UserController->addCustomer()
+#4 [internal function]: UserController->actionAdd_step2('2')
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#18 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=2
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step2&user_kind=2
+---
+2015/03/08 16:03:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_customer`, CONSTRAINT `fk_customer_user` FOREIGN KEY (`pk_cust_id`) REFERENCES `tbl_user` (`pk_usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_customer` (`cust_level`, `cust_balance`, `cust_point`, `cust_realname`, `cust_mobile1`, `cust_mobile2`, `cust_phone`, `cust_sex`, `cust_birthday`, `cust_email1`, `cust_email2`, `cust_child_no`, `cust_childbearing_age`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12). Bound with :yp0=1, :yp1='0.00', :yp2=0, :yp3='', :yp4='', :yp5='', :yp6='', :yp7='', :yp8='', :yp9='', :yp10='', :yp11=NULL, :yp12=NULL.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (523)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (414)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 16:03:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eyoungdb`.`tbl_customer`, CONSTRAINT `fk_customer_user` FOREIGN KEY (`pk_cust_id`) REFERENCES `tbl_user` (`pk_usr_id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_customer` (`cust_level`, `cust_balance`, `cust_point`, `cust_realname`, `cust_mobile1`, `cust_mobile2`, `cust_phone`, `cust_sex`, `cust_birthday`, `cust_email1`, `cust_email2`, `cust_child_no`, `cust_childbearing_age`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12). Bound with :yp0=1, :yp1='0.00', :yp2=0, :yp3='', :yp4='', :yp5='', :yp6='', :yp7='', :yp8='', :yp9='', :yp10='', :yp11=NULL, :yp12=NULL' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(523): CActiveRecord->save()
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(414): UserController->addCustomer()
+#4 [internal function]: UserController->actionAdd_step2('2')
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#18 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=2
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step2&user_kind=2
+---
+2015/03/08 16:06:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'user_tel_cell_UNIQUE'. The SQL statement executed was: INSERT INTO `tbl_customer` (`cust_level`, `cust_balance`, `cust_point`, `cust_realname`, `cust_mobile1`, `cust_mobile2`, `cust_phone`, `cust_sex`, `cust_birthday`, `cust_email1`, `cust_email2`, `cust_child_no`, `cust_childbearing_age`, `pk_cust_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13). Bound with :yp0=1, :yp1='0.00', :yp2=0, :yp3='', :yp4='', :yp5='', :yp6='', :yp7='', :yp8='', :yp9='', :yp10='', :yp11=NULL, :yp12=NULL, :yp13='1000015'.
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (525)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (414)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/08 16:06:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'user_tel_cell_UNIQUE'. The SQL statement executed was: INSERT INTO `tbl_customer` (`cust_level`, `cust_balance`, `cust_point`, `cust_realname`, `cust_mobile1`, `cust_mobile2`, `cust_phone`, `cust_sex`, `cust_birthday`, `cust_email1`, `cust_email2`, `cust_child_no`, `cust_childbearing_age`, `pk_cust_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13). Bound with :yp0=1, :yp1='0.00', :yp2=0, :yp3='', :yp4='', :yp5='', :yp6='', :yp7='', :yp8='', :yp9='', :yp10='', :yp11=NULL, :yp12=NULL, :yp13='1000015'' in /Users/alfredzhang/Sites/yii_learn/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(525): CActiveRecord->save()
+#3 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(414): UserController->addCustomer()
+#4 [internal function]: UserController->actionAdd_step2('2')
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#17 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#18 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=2
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step2&user_kind=2
+---
+2015/03/08 17:10:17 [error] [exception.CException] exception 'CException' with message 'Property "CRequiredValidator.messge" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(177): CComponent->__set('messge', '\xE7\xBE\x8E\xE5\xAE\xB9\xE5\xB8\x88\xE5\xA7\x93\xE5\x90\x8D...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): CValidator::createValidator('required', Object(Beautician), 'beau_realname', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): CModel->createValidators()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): CModel->getValidators('beau_realname')
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Beautician), 'beau_realname', Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(Beautician), 'beau_realname', Array)
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Add_step2.php(153): CActiveForm->textField(Object(Beautician), 'beau_realname')
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(495): CController->renderPartial('Add_step2', Array)
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(411): UserController->addBeautician()
+#12 [internal function]: UserController->actionAdd_step2('1')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#22 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#24 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#25 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#26 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=1
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step1
+---
+2015/03/08 17:15:06 [error] [exception.CException] exception 'CException' with message 'Property "CRequiredValidator.messge" is not defined.' in /Users/alfredzhang/Sites/yii_learn/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/validators/CValidator.php(177): CComponent->__set('messge', '\xE7\xBE\x8E\xE5\xAE\xB9\xE5\xB8\x88\xE5\xA7\x93\xE5\x90\x8D...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(287): CValidator::createValidator('required', Object(Beautician), 'beau_realname', Array)
+#2 /Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php(260): CModel->createValidators()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(2435): CModel->getValidators('beau_realname')
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): CHtml::activeInputField('text', Object(Beautician), 'beau_realname', Array)
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): CHtml::activeTextField(Object(Beautician), 'beau_realname', Array)
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Add_step2.php(153): CActiveForm->textField(Object(Beautician), 'beau_realname')
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require('/Users/alfredzh...')
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/alfredzh...', Array, true)
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): CBaseController->renderFile('/Users/alfredzh...', Array, true)
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(495): CController->renderPartial('Add_step2', Array)
+#11 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(411): UserController->addBeautician()
+#12 [internal function]: UserController->actionAdd_step2('1')
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#22 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('add_step2')
+#24 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('user/add_step2')
+#25 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#26 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#27 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=1
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=user/add_step1
+---
+2015/03/08 17:16:02 [error] [php] Invalid argument supplied for foreach() (/Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php:284)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Add_step2.php(153): CActiveForm->textField()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): UserController->renderInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): UserController->renderFile()
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(495): UserController->renderPartial()
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(411): UserController->addBeautician()
+#8 unknown(0): UserController->actionAdd_step2()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#20 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#22 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=1
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Add_step2.php (153)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (495)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (411)
+2015/03/08 17:16:52 [error] [php] Invalid argument supplied for foreach() (/Users/alfredzhang/Sites/yii_learn/framework/base/CModel.php:284)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/helpers/CHtml.php(1533): activeInputField()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/widgets/CActiveForm.php(792): activeTextField()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Add_step2.php(161): CActiveForm->textField()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(126): require()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/CBaseController.php(95): UserController->renderInternal()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(869): UserController->renderFile()
+#6 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(495): UserController->renderPartial()
+#7 /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php(411): UserController->addBeautician()
+#8 unknown(0): UserController->actionAdd_step2()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#10 /Users/alfredzhang/Sites/yii_learn/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#13 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#16 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#18 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): UserController->runActionWithFilters()
+#19 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): UserController->run()
+#20 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#22 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=user/add_step2&user_kind=1
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/views/user/Add_step2.php (161)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (495)
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/UserController.php (411)
