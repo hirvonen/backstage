@@ -66,7 +66,7 @@
 </div>
 <div style="font-size: 13px; margin: 10px 5px;">
 	<table class="table_a" border="1" width="100%">
-		<tbody><tr style="font-weight: bold;">
+		<tbody><tr bgcolor="#4169e1" style="font-weight: bold;">
 			<td align="center">操作</td>
 			<td>商品编号</td>
 			<td>种别</td>
@@ -87,9 +87,18 @@
 			<td>排序</td>
 		</tr>
 		<?php
+        $i = 0;
 		foreach ($commodity_info as $_v) {
 			?>
-			<tr id="product1">
+			<tr <?php
+                if($i%2 != 0){
+                    echo 'bgcolor="#add8e6"';
+                }
+                else{
+                    echo 'bgcolor="#ffffff"';
+                }
+                ?>
+                id="product1">
 				<td><a href="./index.php?r=commodity/updateProduct&id=<?php echo $_v->pk_comm_id ?>">修改</a></td>
 				<td><?php echo $_v->pk_comm_id ?></td>
 				<td><?php
@@ -141,7 +150,8 @@
 				</td>
 			</tr>
 		<?php
-		}
+		    $i++;
+        }
 		?>
 		<tr>
 			<td colspan="20" style="text-align: center;">

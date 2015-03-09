@@ -51,7 +51,7 @@
 </div>
 <div style="font-size: 13px; margin: 10px 5px;">
 	<table class="table_a" border="1" width="100%">
-		<tbody><tr style="font-weight: bold;">
+		<tbody><tr bgcolor="#4169e1" style="font-weight: bold;">
 			<td align="center">操作</td>
 			<td>用户编号</td>
 			<td>用户种别</td>
@@ -60,9 +60,18 @@
 			<td>创建时间</td>
 		</tr>
 		<?php
+        $i=0;
 		foreach ($user_info as $_v) {
 			?>
-			<tr id="user1">
+			<tr <?php
+                if($i%2 != 0){
+                    echo 'bgcolor="#add8e6"';
+                }
+                else{
+                    echo 'bgcolor="#ffffff"';
+                }
+                ?>
+                id="user1">
 				<td><a href="./index.php?r=user/detail&id=<?php echo $_v->pk_usr_id ?>">详细</a></td>
 				<td><?php echo $_v->pk_usr_id ?></td>
 				<td><?php
@@ -103,7 +112,8 @@
 				<td><?php echo $_v->usr_create_time; ?></a></td>
 			</tr>
 		<?php
-		}
+		    $i++;
+        }
 		?>
 		<tr>
 			<td colspan="20" style="text-align: center;">

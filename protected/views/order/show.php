@@ -20,87 +20,98 @@
 <div class="div_search">
             <span>
                 <?php $form = $this->beginWidget('CActiveForm'); ?>
-	            <?php
-		            if(isset($_POST["usr_kind"])) {
-			            $select_kind = $_POST["usr_kind"];
-		            }
-		            else {
-			            $select_kind = 0;
-		            }
-	            ?>
-	            种别<select name="usr_kind" style="width: 100px;">
-		            <option <?php
-		            if( $select_kind == 0 ) echo " selected="."'"."selected"."' ";
-		            ?> value="0">全部</option>
-		            <option <?php
-		            if( $select_kind == 1 ) echo " selected="."'"."selected"."' ";
-		            ?> value="1">管理员</option>
-		            <option <?php
-		            if( $select_kind == 2 ) echo " selected="."'"."selected"."' ";
-		            ?> value="2">理疗师</option>
-		            <option <?php
-		            if( $select_kind == 3 ) echo " selected="."'"."selected"."' ";
-		            ?> value="3">顾客</option>
-	            </select>
+                <?php
+                if(isset($_POST["ord_status"])) {
+                    $select_status = $_POST["ord_status"];
+                }
+                else {
+                    $select_status = 0;
+                }
+                ?>
+                订单状态<select name="ord_status" style="width: 100px;">
+                    <option <?php
+                    if( $select_status == 0 ) echo " selected="."'"."selected"."' ";
+                    ?> value="0">全部</option>
+                    <option <?php
+                    if( $select_status == 100 ) echo " selected="."'"."selected"."' ";
+                    ?> value="100">等待确认</option>
+                    <option <?php
+                    if( $select_status == 200 ) echo " selected="."'"."selected"."' ";
+                    ?> value="200">等待付款</option>
+                    <option <?php
+                    if( $select_status == 300 ) echo " selected="."'"."selected"."' ";
+                    ?> value="300">等待服务</option>
+                    <option <?php
+                    if( $select_status == 400 ) echo " selected="."'"."selected"."' ";
+                    ?> value="400">订单取消</option>
+                    <option <?php
+                    if( $select_status == 500 ) echo " selected="."'"."selected"."' ";
+                    ?> value="500">等待评价</option>
+                    <option <?php
+                    if( $select_status == 600 ) echo " selected="."'"."selected"."' ";
+                    ?> value="600">订单完成</option>
+                </select>
 	                <input value="查询" type="submit" />
-	            <?php $this->endWidget(); ?>
+                <?php $this->endWidget(); ?>
             </span>
 </div>
 <div style="font-size: 13px; margin: 10px 5px;">
 	<table class="table_a" border="1" width="100%">
-		<tbody><tr style="font-weight: bold;">
+		<tbody><tr bgcolor="#4169e1" style="font-weight: bold;">
 			<td align="center">操作</td>
-			<td>用户编号</td>
-			<td>用户种别</td>
-			<td>用户注册来源</td>
-			<td>用户名</td>
-			<td>创建时间</td>
+			<td>订单编号</td>
+			<td>顾客编号</td>
+			<td>订单状态</td>
+			<td>顾客姓名</td>
+			<td>支付方法</td>
+            <td>更新时间</td>
 		</tr>
 		<?php
-		foreach ($user_info as $_v) {
+        $i = 0;
+		foreach ($order_info as $_v) {
 			?>
-			<tr id="user1">
-				<td><a href="./index.php?r=user/detail&id=<?php echo $_v->pk_usr_id ?>">详细</a></td>
-				<td><?php echo $_v->pk_usr_id ?></td>
+			<tr <?php
+                if($i%2 != 0){
+                    echo 'bgcolor="#add8e6"';
+                }
+                else{
+                    echo 'bgcolor="#ffffff"';
+                }
+                ?> id="user1">
+				<td><a href="./index.php?r=order/detail&id=<?php echo $_v->pk_ord_id ?>">详细</a></td>
+				<td><?php echo $_v->pk_ord_id ?></td>
+				<td><?php echo $_v->ord_cust_id ?></td>
 				<td><?php
-					if($_v->usr_kind == 0) {
-						echo "管理员";
+					switch($_v->ord_status) {
+                        case 100:
+    						echo "等待确认";
+                            break;
+                        case 200:
+                            echo "等待付款";
+                            break;
+                        case 300:
+                            echo "等待服务";
+                            break;
+                        case 400:
+                            echo "订单取消";
+                            break;
+                        case 500:
+                            echo "等待评价";
+                            break;
+                        case 600:
+                            echo "订单完成";
+                            break;
+                        default:
+                            break;
 					}
-					elseif($_v->usr_kind == 1){
-						echo "理疗师";
-					}
-					elseif($_v->usr_kind == 2){
-						echo "顾客";
-					}
-					else{
-						echo "未知";
-					}
-					?></a></td>
-				<td><?php
-					if($_v->usr_reg_kind == 0) {
-						echo "微信用户";
-					}
-					elseif($_v->usr_reg_kind == 1){
-						echo "新浪微博用户";
-					}
-					elseif($_v->usr_reg_kind == 2){
-						echo "QQ用户";
-					}
-					elseif($_v->usr_reg_kind == 3){
-						echo "腾讯微博用户";
-					}
-					elseif($_v->usr_reg_kind == 4){
-						echo "网站注册用户";
-					}
-					else{
-						echo "未知";
-					}
-					?></a></td>
-				<td><?php echo $_v->usr_username; ?></a></td>
-				<td><?php echo $_v->usr_create_time; ?></a></td>
+					?></td>
+				<td><?php echo $_v->ord_cust_name; ?></td>
+				<td><?php echo $_v->ord_pay_way; ?></td>
+				<td><?php echo $_v->ord_upt_time; ?></td>
 			</tr>
 		<?php
-		}
+		    $i++;
+        }
 		?>
 		<tr>
 			<td colspan="20" style="text-align: center;">
