@@ -3997,3 +3997,70 @@ Stack trace:
 REQUEST_URI=/yii/backstage/index.php?r=order/detail?id=80000028
 HTTP_REFERER=http://localhost:8000/yii/backstage/index.php?r=order/update&id=80000028
 ---
+2015/03/10 23:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "appointment/show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('appointment/sho...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=appointment/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/10 23:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "appointment/show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('appointment/sho...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=appointment/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/11 00:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addOrder".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('addOrder')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('addOrder')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('order/addOrder')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=order/addOrder
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=order/show
+---
+2015/03/11 00:30:59 [error] [php] Undefined variable: order_model (/Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/OrderController.php:108)
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(133): OrderController->runAction()
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CInlineFilter.php(58): OrderController->filterAccessControl()
+#4 /Users/alfredzhang/Sites/yii_learn/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(265): OrderController->runActionWithFilters()
+#7 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): OrderController->run()
+#8 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CWebApplication->run()
+REQUEST_URI=/yii_learn/backstage/index.php?r=order/add
+in /Users/alfredzhang/Sites/yii_learn/backstage/protected/controllers/OrderController.php (108)
+in /Users/alfredzhang/Sites/yii_learn/backstage/index.php (15)
+2015/03/11 00:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show ?>".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show ?>')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show ?>')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('order/show ?>')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=order/show%20?%3E
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=order/add
+---
+2015/03/11 00:42:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "show ?>".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php:483
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CController.php(270): CController->missingAction('show ?>')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(282): CController->run('show ?>')
+#2 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('order/show ?>')
+#3 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=order/show%20?%3E
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=order/add
+---

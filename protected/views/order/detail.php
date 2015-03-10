@@ -108,7 +108,27 @@
                 <?php echo $form->label($order_info, 'ord_pay_way'); ?>
             </td>
             <td>
-                <?php echo $order_info->ord_pay_way; ?>
+	            <?php
+	            switch($order_info->ord_pay_way) {
+		            case 1:
+			            echo "支付宝支付";
+			            break;
+		            case 2:
+			            echo "微信支付";
+			            break;
+		            case 3:
+			            echo "余额支付";
+			            break;
+		            case 4:
+			            echo "上门到付";
+			            break;
+		            case 5:
+			            echo "团购支付";
+			            break;
+		            default:
+			            break;
+	            }
+	            ?>
             </td>
 		</tr>
 		<tr bgcolor="#add8e6">

@@ -39,4 +39,16 @@ class Order extends CActiveRecord
             'ord_upt_time'=>'订单更新时间',
         );
     }
+
+    /**
+     * 表单验证规则
+     */
+    public function rules()
+    {
+        return array(
+            array('ord_cust_tel','match','pattern'=>'/^[0-9]\d*$/','message'=>'电话号码必须是数字！'),
+            array('ord_cust_postcode','match','pattern'=>'/^[0-9]\d{5}$/','message'=>'邮编形式不正确！'),
+            array('pk_ord_id,ord_cust_id,ord_status,ord_cust_name,ord_cust_addr,ord_pay_way,ord_upt_time','safe'),
+        );
+    }
 }

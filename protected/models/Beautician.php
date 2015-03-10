@@ -43,7 +43,7 @@ class Beautician extends CActiveRecord
 	}
 
 	/**
-	 * 商品添加表单验证规则
+	 * 表单验证规则
 	 */
 	public function rules()
 	{

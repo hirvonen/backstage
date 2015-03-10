@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-	<title>订单详细信息修改</title>
+	<title>订单添加</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
 	<link href="<?php echo BACK_CSS_URL; ?>mine.css" type="text/css" rel="stylesheet">
 </head>
@@ -10,9 +10,9 @@
 
 <div class="div_head">
             <span>
-                <span style="float:left">当前位置是：用户管理-》修改订单详细信息</span>
+                <span style="float:left">当前位置是：用户管理-》添加订单</span>
 	            <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="./index.php?r=order/detail&id=<?php echo $order_info->pk_ord_id ?>">【返回】</a>
+                    <a style="text-decoration: none" href="./index.php?r=order/show">【返回】</a>
                 </span>
             </span>
 </div>
@@ -21,20 +21,12 @@
 <div style="font-size: 13px;margin: 10px 5px">
 	<?php $form = $this->beginWidget('CActiveForm'); ?>
 	<table border="1" width="100%" class="table_a">
-        <tr bgcolor="#add8e6">
-            <td>
-                <?php echo $form->label($order_info, 'pk_ord_id'); ?>
-            </td>
-            <td>
-                <?php echo $order_info->pk_ord_id; ?>
-            </td>
-        </tr>
         <tr bgcolor="#ffffff">
             <td>
-                <?php echo $form->label($order_info, 'ord_cust_id'); ?>
+                <?php echo $form->labelEx($order_info, 'ord_cust_id'); ?>
             </td>
             <td>
-                <?php echo $order_info->ord_cust_id; ?>
+                <?php echo $form->textField($order_info, 'ord_cust_id'); ?>
             </td>
         </tr>
         <tr bgcolor="#add8e6">
@@ -113,7 +105,7 @@
         </tr>
 		<tr>
 			<td colspan="2" align="center">
-				<input type="submit" value="修改">
+				<input type="submit" value="添加">
 			</td>
 		</tr>
 	</table>

@@ -26,7 +26,7 @@ class OrderController extends Controller
 		return array(
 			array(
 				'allow',
-				'actions'=>array('show','detail','update'),
+				'actions'=>array('show','detail','update','add'),
 				'users'=>array('@'),
 			),
 //			array(
@@ -78,8 +78,40 @@ class OrderController extends Controller
 	}
 
     /**
- * 订单详细信息
- */
+     * 新建订单
+     */
+    public function actionAdd()
+    {
+        $order_model = new Order();
+
+        if(isset($_POST["Order"])){
+            $order_model->attributes = $_POST["Order"];
+
+            //订单用户检证
+            $cust_model = Customer::model();
+            if(!$cust_model->findByPk($order_model->ord_cust_id)) {
+                echo "<script>alert('该用户不存在！');</script>";
+            }
+            else {
+                //订单更新时间更新
+                $order_model->ord_upt_time = date("Y-m-d H:i:s", time());
+
+                if ($order_model->save()) {
+                    $this->redirect("./index.php?r=order/show");
+                } else {
+                    //var_dump($user_info->getErrors());
+                    //var_dump($customer_info->getErrors());
+                    echo "<script>alert('订单添加失败！');</script>";
+                }
+            }
+        }
+
+        $this->renderPartial('Add', array("order_info" => $order_model));
+    }
+
+    /**
+    * 订单详细信息
+     */
     public function actionDetail($id)
     {
         $order_model = Order::model();
@@ -102,6 +134,34 @@ class OrderController extends Controller
         $order_info = $order_model->findByPk($id);
         if(isset($order_info)) {
             //订单详细信息
+            if (isset($_POST["Order"])) {
+                $order_info->attributes = $_POST["Order"];
+
+                //订单更新时间更新
+                $order_info->ord_upt_time = date("Y-m-d H:i:s", time());
+
+                //订单收货信息更新
+                //如果用户没有设置订单收货信息（姓名地址邮编电话），则从customer表中查询信息
+                $cust_model = Customer::model();
+                $cust_info = $cust_model->findByPk($order_model->ord_cust_id);
+//                if(isset($cust_info)) {
+//                    if($order_info->ord_cust_name == '') {
+//                        $order_info->ord_cust_name = $cust_info->cust_realname;
+//                    }
+//                    if($order_info->ord_cust_tel == '') {
+//                        $order_info->ord_cust_tel = $cust_info->cust_mobile1;
+//                    }
+//                }
+
+                if($order_info->save()){
+                    $this->redirect("./index.php?r=order/detail&id=$id");
+                }
+                else {
+                    //var_dump($user_info->getErrors());
+                    //var_dump($customer_info->getErrors());
+                    echo "<script>alert('订单信息修改失败！');</script>";
+                }
+            }
             $this->renderPartial('Update', array("order_info" => $order_info));
         }
         else{

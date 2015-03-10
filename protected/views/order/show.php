@@ -14,6 +14,9 @@
 <div class="div_head">
             <span>
                 <span style="float: left;">当前位置是：交易管理-》订单一览</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                    <a style="text-decoration: none;" href="./index.php?r=order/add">【添加订单】</a>
+                </span>
             </span>
 </div>
 <div></div>
@@ -106,7 +109,27 @@
 					}
 					?></td>
 				<td><?php echo $_v->ord_cust_name; ?></td>
-				<td><?php echo $_v->ord_pay_way; ?></td>
+				<td><?php
+                    switch($_v->ord_pay_way) {
+                        case 1:
+                            echo "支付宝支付";
+                            break;
+                        case 2:
+                            echo "微信支付";
+                            break;
+                        case 3:
+                            echo "余额支付";
+                            break;
+                        case 4:
+                            echo "上门到付";
+                            break;
+                        case 5:
+                            echo "团购支付";
+                            break;
+                        default:
+                            break;
+                    }
+                    ?></td>
 				<td><?php echo $_v->ord_upt_time; ?></td>
 			</tr>
 		<?php
