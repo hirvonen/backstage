@@ -95,14 +95,6 @@
                 ?>
             </td>
         </tr>
-        <tr bgcolor="#add8e6">
-            <td>
-                <?php echo $form->label($order_info, 'ord_upt_time'); ?>
-            </td>
-            <td>
-                <?php echo $order_info->ord_upt_time; ?>
-            </td>
-        </tr>
 		<tr>
 			<td colspan="2" align="center">
 				<input type="submit" value="添加">

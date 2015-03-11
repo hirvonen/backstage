@@ -4064,3 +4064,39 @@ Stack trace:
 REQUEST_URI=/yii_learn/backstage/index.php?r=order/show%20?%3E
 HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=order/add
 ---
+2015/03/12 01:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "appointment/show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('appointment/sho...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=appointment/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/12 01:24:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "appointment/show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('appointment/sho...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=appointment/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/12 01:24:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "appointment/show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('appointment/sho...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=appointment/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
+2015/03/12 01:25:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "appointment/show".' in /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/alfredzhang/Sites/yii_learn/framework/web/CWebApplication.php(141): CWebApplication->runController('appointment/sho...')
+#1 /Users/alfredzhang/Sites/yii_learn/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/alfredzhang/Sites/yii_learn/backstage/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii_learn/backstage/index.php?r=appointment/show
+HTTP_REFERER=http://localhost/yii_learn/backstage/index.php?r=index/left
+---
