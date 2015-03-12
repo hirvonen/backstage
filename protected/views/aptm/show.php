@@ -36,23 +36,23 @@
                     if( $select_status == 0 ) echo " selected="."'"."selected"."' ";
                     ?> value="0">全部</option>
                     <option <?php
-                    if( $select_status == 100 ) echo " selected="."'"."selected"."' ";
-                    ?> value="100">等待付款</option>
+                    if( $select_status == 1 ) echo " selected="."'"."selected"."' ";
+                    ?> value="1">等待付款</option>
                     <option <?php
-                    if( $select_status == 200 ) echo " selected="."'"."selected"."' ";
-                    ?> value="200">等待确认</option>
+                    if( $select_status == 2 ) echo " selected="."'"."selected"."' ";
+                    ?> value="2">等待确认</option>
                     <option <?php
-                    if( $select_status == 300 ) echo " selected="."'"."selected"."' ";
-                    ?> value="300">等待服务</option>
+                    if( $select_status == 3 ) echo " selected="."'"."selected"."' ";
+                    ?> value="3">等待服务</option>
                     <option <?php
-                    if( $select_status == 400 ) echo " selected="."'"."selected"."' ";
-                    ?> value="400">预约取消</option>
+                    if( $select_status == 4 ) echo " selected="."'"."selected"."' ";
+                    ?> value="4">预约取消</option>
                     <option <?php
-                    if( $select_status == 500 ) echo " selected="."'"."selected"."' ";
-                    ?> value="500">等待评价</option>
+                    if( $select_status == 5 ) echo " selected="."'"."selected"."' ";
+                    ?> value="5">等待评价</option>
                     <option <?php
-                    if( $select_status == 600 ) echo " selected="."'"."selected"."' ";
-                    ?> value="600">评价完毕</option>
+                    if( $select_status == 6 ) echo " selected="."'"."selected"."' ";
+                    ?> value="6">评价完毕</option>
                 </select>
 	                <input value="查询" type="submit" />
                 <?php $this->endWidget(); ?>
@@ -70,8 +70,20 @@
             <td>顾客姓名</td>
             <td>第几次</td>
 		</tr>
+        <?php $form = $this->beginWidget('CActiveForm'); ?>
 		<?php
         $i = 0;
+
+        //理疗师姓名查找用数据准备
+        $beau_model = Beautician::model();
+        $query = "select * from tbl_beautician";
+        $beau_info = $beau_model->findAllBySql($query);
+        //构建dropDownList的option用的数组
+        $beau_options = array();
+        foreach($beau_info as $_beau_v){
+            $beau_options["$_beau_v->pk_beau_id"] = "$_beau_v->beau_realname";
+        }
+
 		foreach ($aptm_info as $_v) {
 			?>
 			<tr <?php
@@ -84,42 +96,35 @@
                 ?> id="user1">
 				<td><a href="./index.php?r=appointment/detail&id=<?php echo $_v->pk_aptm_id ?>">详细</a></td>
 				<td><?php echo $_v->pk_aptm_id ?></td>
+				<td>
+                    <?php
+                    $options = array ('1'=>'等待付款',
+                        '2'=>'等待确认',
+                        '3'=>'等待服务',
+                        '4'=>'预约取消',
+                        '5'=>'等待评价',
+                        '6'=>'评价完毕',);
+                    echo $form->dropDownList($_v,'aptm_status',$options);
+                    ?>
+                </td>
 				<td><?php
-					switch($_v->aptm_status) {
-                        case 100:
-    						echo "等待付款";
-                            break;
-                        case 200:
-                            echo "等待确认";
-                            break;
-                        case 300:
-                            echo "等待服务";
-                            break;
-                        case 400:
-                            echo "预约取消";
-                            break;
-                        case 500:
-                            echo "等待评价";
-                            break;
-                        case 600:
-                            echo "评价完毕";
-                            break;
-                        default:
-                            break;
-					}
-					?></td>
-				<td><?php echo $_v->ord_cust_name; ?></td>
-				<td><?php
-                    $beau_model = Beautician::model();
-                    $beau_info = $beau_model->findByPk($_v->aptm_beau_id);
-                    if(isset($beau_info)) {
-                        echo $beau_info->beau_realname;
+//                    $beau_info = $beau_model->findByPk($_v->aptm_beau_id);
+//                    if(isset($beau_info)) {
+//                        echo $beau_info->beau_realname;
+//                    }
+//                    else {
+//                        echo $_v->aptm_beau_id;
+//                    }
+                    $aptm_beau_info = $beau_model->findByPk($_v->aptm_beau_id);
+                    if(isset($aptm_beau_info)) {
+                        echo $form->dropDownList($_v,'aptm_beau_id',$beau_options);
                     }
                     else {
                         echo $_v->aptm_beau_id;
                     }
-                    ?></td>
-				<td><?php echo $_v->aptm_time; ?></td>
+                    ?>
+                </td>
+				<td><?php echo $form->textField($_v,'aptm_time'); ?></td>
                 <td><?php
                     $ord_item_model = Order_Item::model();
                     $ord_item_info = $ord_item_model->findByPk($_v->aptm_ord_item_id);
@@ -139,11 +144,13 @@
                 ?></td>
                 <td><?php echo $_v->aptm_cust_name; ?></td>
                 <td><?php echo $_v->aptm_course_no; ?></td>
+                <td><input value="修改" type="submit" /></td>
 			</tr>
 		<?php
 		    $i++;
         }
 		?>
+        <?php $this->endWidget(); ?>
 		<tr>
 			<td colspan="20" style="text-align: center;">
 				[1]

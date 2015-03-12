@@ -4,7 +4,7 @@
  * 预约表模型
  * Class Appointment
  */
-class Appointment extends CActiveRecord
+class Aptm extends CActiveRecord
 {
 	/**
 	 * 创建模型对象

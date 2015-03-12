@@ -47,7 +47,13 @@ class AptmController extends Controller
 	 */
 	public function actionShow()
 	{
-        $aptm_model = Order::model();
+        $aptm_model = Aptm::model();
+
+        if(isset($_POST)) {
+            echo "<pre>";
+            print_r($_POST);
+            echo "</pre>";
+        }
 
         if(isset($_POST["aptm_status"])){
             if($_POST["aptm_status"]==0){
