@@ -20,6 +20,27 @@
             </span>
 </div>
 <div></div>
+<!--<pre><div class="Input">-->
+<!--        <label>time:<span class="required">(*)</span></label>-->
+<!--        --><?php
+//        Yii::getPathOfAlias('zii');
+//        Yii::import ('zii.*');
+//        $test_info = $aptm_info->findByPk('90000015');
+//        $this->widget("zii.widgets.jui.CJuiDatePicker", array(
+//            'model'=>$test_info,
+//            'attribute'=>'aptm_time',
+//            'options' => array(
+//                'dateFormat'=>'yy-mm-dd', //database save format
+//                'altFormat'=>'mm-dd-yy', //display format
+//                'showAnim'=>'fold',
+//                'yearRange'=>'-3:+3',
+//            ),
+//            'htmlOptions'=>array(
+//                'readonly'=>'readonly',
+//                'style'=>'width:90px;',
+//            )
+//        ));?>
+<!--    </div></pre>-->
 <div class="div_search">
             <span>
                 <?php $form = $this->beginWidget('CActiveForm'); ?>
@@ -94,37 +115,56 @@
                     echo 'bgcolor="#ffffff"';
                 }
                 ?> id="user1">
-				<td><a href="./index.php?r=appointment/detail&id=<?php echo $_v->pk_aptm_id ?>">详细</a></td>
+				<td><a href="./index.php?r=aptm/detail&id=<?php echo $_v->pk_aptm_id ?>&source_page=show">详细</a></td>
 				<td><?php echo $_v->pk_aptm_id ?></td>
 				<td>
                     <?php
-                    $options = array ('1'=>'等待付款',
-                        '2'=>'等待确认',
-                        '3'=>'等待服务',
-                        '4'=>'预约取消',
-                        '5'=>'等待评价',
-                        '6'=>'评价完毕',);
-                    echo $form->dropDownList($_v,'aptm_status',$options);
+//                    $options = array ('1'=>'等待付款',
+//                        '2'=>'等待确认',
+//                        '3'=>'等待服务',
+//                        '4'=>'预约取消',
+//                        '5'=>'等待评价',
+//                        '6'=>'评价完毕',);
+//                    echo $form->dropDownList($_v,'aptm_status',$options);
+                    switch($_v->aptm_status) {
+                        case 1:
+                            echo "等待付款";
+                            break;
+                        case 2:
+                            echo "等待确认";
+                            break;
+                        case 3:
+                            echo "等待服务";
+                            break;
+                        case 4:
+                            echo "预约取消";
+                            break;
+                        case 5:
+                            echo "等待评价";
+                            break;
+                        case 6:
+                            echo "评价完毕";
+                            break;
+                    }
                     ?>
                 </td>
 				<td><?php
-//                    $beau_info = $beau_model->findByPk($_v->aptm_beau_id);
-//                    if(isset($beau_info)) {
-//                        echo $beau_info->beau_realname;
-//                    }
-//                    else {
-//                        echo $_v->aptm_beau_id;
-//                    }
                     $aptm_beau_info = $beau_model->findByPk($_v->aptm_beau_id);
                     if(isset($aptm_beau_info)) {
-                        echo $form->dropDownList($_v,'aptm_beau_id',$beau_options);
+                        //echo $form->dropDownList($_v,'aptm_beau_id',$beau_options);
+                        echo $aptm_beau_info->beau_realname;
                     }
                     else {
                         echo $_v->aptm_beau_id;
                     }
                     ?>
                 </td>
-				<td><?php echo $form->textField($_v,'aptm_time'); ?></td>
+<!--				<td>--><?php //echo $form->textField($_v,'aptm_time'); ?><!--</td>-->
+                <td>
+                    <?php
+                    echo $_v->aptm_time;
+                    ?>
+                </td>
                 <td><?php
                     $ord_item_model = Order_Item::model();
                     $ord_item_info = $ord_item_model->findByPk($_v->aptm_ord_item_id);
@@ -144,7 +184,7 @@
                 ?></td>
                 <td><?php echo $_v->aptm_cust_name; ?></td>
                 <td><?php echo $_v->aptm_course_no; ?></td>
-                <td><input value="修改" type="submit" /></td>
+<!--                <td><input value="修改" type="submit" /></td>-->
 			</tr>
 		<?php
 		    $i++;

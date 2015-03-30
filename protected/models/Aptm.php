@@ -24,4 +24,19 @@ class Aptm extends CActiveRecord
 	{
 		return '{{appointment}}';
 	}
+
+	public function attributeLabels()
+	{
+		return array(
+			'pk_aptm_id'=>'预约单号',
+			'aptm_beau_id'=>'美容师',
+			'aptm_time'=>'预约时间',
+			'aptm_ord_item_id'=>'预约项目名',
+			'aptm_status'=>'预约状态',
+			'aptm_course_no'=>'疗程内的次数',
+			'aptm_cust_name'=>'用户姓名',
+			'aptm_cust_tel'=>'用户电话',
+			'aptm_cust_addr'=>'用户地址',
+		);
+	}
 }
