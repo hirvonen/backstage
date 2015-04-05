@@ -63,15 +63,18 @@
 		<tbody><tr bgcolor="#4169e1" style="font-weight: bold;">
 			<td align="center">操作</td>
 			<td>订单编号</td>
-			<td>顾客编号</td>
+<!--			<td>顾客编号</td>-->
 			<td>订单状态</td>
 			<td>顾客姓名</td>
 			<td>支付方法</td>
+            <td>订单金额</td>
             <td>更新时间</td>
 		</tr>
 		<?php
         $i = 0;
+        $order_model = Order_Item::model();
 		foreach ($order_info as $_v) {
+            $price = 0;
 			?>
 			<tr <?php
                 if($i%2 != 0){
@@ -83,7 +86,7 @@
                 ?> id="user1">
 				<td><a href="./index.php?r=order/detail&id=<?php echo $_v->pk_ord_id ?>">详细</a></td>
 				<td><?php echo $_v->pk_ord_id ?></td>
-				<td><?php echo $_v->ord_cust_id ?></td>
+<!--				<td>--><?php //echo $_v->ord_cust_id ?><!--</td>-->
 				<td><?php
 					switch($_v->ord_status) {
                         case 100:
@@ -129,6 +132,16 @@
                         default:
                             break;
                     }
+                    ?></td>
+                <td><?php
+                    $query = 'select * from tbl_order_item where pk_ord_itm_ord_id = '.$_v->pk_ord_id;
+                    $order_item_info = $order_model->findAllBySql($query);
+                    if(isset($order_item_info)){
+                        foreach($order_item_info as $_value_price){
+                            $price += $_value_price->ord_item_price * $_value_price->ord_item_num;
+                        }
+                    }
+                    echo number_format($price,2);
                     ?></td>
 				<td><?php echo $_v->ord_upt_time; ?></td>
 			</tr>

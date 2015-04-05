@@ -48,33 +48,29 @@ class AptmController extends Controller
 	public function actionShow()
 	{
         $aptm_model = Aptm::model();
+        $query = 'select * from tbl_appointment';
 
-        if(isset($_POST["aptm_status"])){
-            if($_POST["aptm_status"]==0){
-                $findByFilter = 0;  //用户没有选择，只是单纯刷新页面，需要查询所有记录
+        if(isset($_POST['aptm_status'])){
+            if($_POST['aptm_status']!=0){
+                $query=$query.' where aptm_status = '.$_POST['aptm_status'];
             }
-            else{
-                $findByFilter = 1;  //需要按照filter查询记录
+            if($_POST['aptm_beau_id']!=0){
+                if(strpos($query,'where')) {
+                    $query = $query . ' and aptm_beau_id = ' . $_POST['aptm_beau_id'];
+                }
+                else{
+                    $query = $query . ' where aptm_beau_id = ' . $_POST['aptm_beau_id'];
+                }
             }
         }
-        else{
-            $findByFilter = 0;  //首次进入页面，需要查询所有记录
-        }
+        $aptm_info = $aptm_model->findAllBySql($query);
 
-        if($findByFilter != 0){
-            if ($_POST["aptm_status"]!=0) {
-                $aptm_status = $_POST["aptm_status"];
-                $aptm_info = $aptm_model->findAllByAttributes(array('aptm_status' => $aptm_status));
-            }
-            else{
-                $aptm_info = $aptm_model->findAll();
-            }
-        }
-        else{
-            $aptm_info = $aptm_model->findAll();
-        }
+        //理疗师姓名查找用数据准备
+        $beau_model = Beautician::model();
+        $query = 'select * from tbl_beautician';
+        $beau_info = $beau_model->findAllBySql($query);
 
-        $this->renderPartial("Show",array('aptm_info'=>$aptm_info));
+        $this->renderPartial("Show",array('aptm_info'=>$aptm_info, 'beau_info'=>$beau_info));
 	}
 
     /**

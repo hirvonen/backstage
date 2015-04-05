@@ -15,7 +15,7 @@
                     <a style="text-decoration: none" href="./index.php?r=order/show">【返回】</a>
                 </span>
 	            <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="./index.php?r=order/update&id=<?php echo $order_info->pk_ord_id; ?>">【修改订单信息】</a>
+                    <a style="text-decoration: none" href="./index.php?r=order/update&id=<?php echo $order_info->pk_ord_id; ?>&ordItmID=FFFFFFFF">【修改订单信息】</a>
                 </span>
             </span>
 </div>
@@ -25,7 +25,7 @@
 	<?php $form = $this->beginWidget('CActiveForm'); ?>
 	<table border="1" width="100%" class="table_a">
 		<tr bgcolor="#add8e6">
-			<td>
+			<td width='300'>
 				<?php echo $form->label($order_info, 'pk_ord_id'); ?>
 			</td>
 			<td>
@@ -132,6 +132,90 @@
             </td>
 		</tr>
 		<tr bgcolor="#add8e6">
+			<td>
+				<?php echo "订单总金额"; ?>
+			</td>
+			<td>
+				<?php
+				$price = 0;
+				foreach($order_item_info as $_value_price){
+					$price += $_value_price->ord_item_price * $_value_price->ord_item_num;
+				}
+				echo number_format($price,2);
+				?>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#6495ed">
+			</td>
+			<td bgcolor="#6495ed">
+			</td>
+		</tr>
+<!--		<tr bgcolor="#add8e6">-->
+<!--			<td>-->
+<!--				--><?php //echo $form->label($order_info, 'ord_total_discount'); ?>
+<!--			</td>-->
+<!--			<td>-->
+<!--				--><?php //echo $order_info->ord_total_discount; ?>
+<!--			</td>-->
+<!--		</tr>-->
+		<tr bgcolor="#ffffff">
+			<td>
+				<?php echo $form->label($order_info, 'ord_deductible'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_deductible; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#add8e6">
+			<td>
+				<?php echo $form->label($order_info, 'ord_downpay'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_downpay; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td>
+				<?php echo $form->label($order_info, 'ord_downpay_deductible'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_downpay_deductible; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#add8e6">
+			<td>
+				<?php echo $form->label($order_info, 'ord_paid_money'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_paid_money; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td>
+				<?php echo $form->label($order_info, 'ord_paid_net'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_paid_net; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#add8e6">
+			<td>
+				<?php echo $form->label($order_info, 'ord_paid_balance'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_paid_balance; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td>
+				<?php echo $form->label($order_info, 'ord_coupon'); ?>
+			</td>
+			<td>
+				<?php echo $order_info->ord_coupon; ?>
+			</td>
+		</tr>
+		<tr bgcolor="#add8e6">
             <td>
                 <?php echo $form->label($order_info, 'ord_upt_time'); ?>
             </td>
@@ -139,6 +223,46 @@
                 <?php echo $order_info->ord_upt_time; ?>
             </td>
 		</tr>
+		<tr>
+			<td bgcolor="#6495ed">
+			</td>
+			<td bgcolor="#6495ed">
+			</td>
+		</tr>
+		<?php
+		$index = 0;
+		$comm_model = Commodity::model();
+		foreach ($order_item_info as $order_item_single) {
+			echo '<tr><td bgcolor="add8e6">'.'订单商品'.($index+1).'</td></tr>';
+			$query = 'select * from tbl_commodity where pk_comm_id = '.$order_item_single->ord_item_comm_id;
+			$comm_info = $comm_model->findBySql($query);
+			echo '<tr>'.
+				'<td>'.
+				$form->label($comm_info, 'comm_name').
+				'</td>'.
+				'<td>'.
+				$comm_info->comm_name.
+				'</td>'.
+				'</tr>';
+			echo '<tr>'.
+				'<td>'.
+				$form->label($order_item_single, 'ord_item_num').
+				'</td>'.
+				'<td>'.
+				$order_item_single->ord_item_num.
+				'</td>'.
+				'</tr>';
+			echo '<tr>'.
+				'<td>'.
+				$form->label($order_item_single, 'ord_item_price').
+				'</td>'.
+				'<td>'.
+				$order_item_single->ord_item_price.
+				'</td>'.
+				'</tr>';
+			$index++;
+		}
+		?>
 	</table>
 	<?php $this->endWidget(); ?>
 </div>

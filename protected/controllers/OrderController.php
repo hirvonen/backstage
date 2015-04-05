@@ -116,9 +116,15 @@ class OrderController extends Controller
     {
         $order_model = Order::model();
         $order_info = $order_model->findByPk($id);
+
+        //查找出本订单相关的所有订单商品
+        $query = 'select * from tbl_order_item where pk_ord_itm_ord_id = '.$order_info->pk_ord_id;
+        $order_model = Order_Item::model();
+        $order_item_info = $order_model->findAllBySql($query);
+
         if(isset($order_info)) {
             //订单详细信息
-            $this->renderPartial('Detail', array("order_info" => $order_info));
+            $this->renderPartial('Detail', array('order_info'=>$order_info, 'order_item_info'=>$order_item_info));
         }
         else{
             echo "<script>alert('未找到该订单！');</script>";
@@ -126,15 +132,32 @@ class OrderController extends Controller
     }
 
     /**
-     * 订单详细信息
+     * 订单详细信息修改
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $ordItmID)
     {
         $order_model = Order::model();
         $order_info = $order_model->findByPk($id);
+
+        //查找出本订单相关的所有订单商品
+        $query = 'select * from tbl_order_item where pk_ord_itm_ord_id = '.$order_info->pk_ord_id;
+        $order_model = Order_Item::model();
+//        $order_item_info = $order_model->findAllBySql($query);
+
         if(isset($order_info)) {
-            //订单详细信息
-            if (isset($_POST["Order"])) {
+            if ($ordItmID != 'FFFFFFFF'){
+                $order_item = $order_model->findByPk($ordItmID);
+                if(isset($order_item)){
+                    $aptm_model = Aptm::model();
+                    $query_aptm = 'select * from tbl_appointment where aptm_ord_item_id = '.$ordItmID;
+                    $aptm_info = $aptm_model->findAllBySql($query_aptm);
+                    foreach ($aptm_info as $_v) {
+                        $_v->delete();
+                    }
+                    $order_item->delete();
+                }
+            }
+            else if (isset($_POST["Order"])) {
                 $order_info->attributes = $_POST["Order"];
 
                 //订单更新时间更新
@@ -142,8 +165,8 @@ class OrderController extends Controller
 
                 //订单收货信息更新
                 //如果用户没有设置订单收货信息（姓名地址邮编电话），则从customer表中查询信息
-                $cust_model = Customer::model();
-                $cust_info = $cust_model->findByPk($order_model->ord_cust_id);
+//                $cust_model = Customer::model();
+//                $cust_info = $cust_model->findByPk($order_model->ord_cust_id);
 //                if(isset($cust_info)) {
 //                    if($order_info->ord_cust_name == '') {
 //                        $order_info->ord_cust_name = $cust_info->cust_realname;
@@ -162,7 +185,8 @@ class OrderController extends Controller
                     echo "<script>alert('订单信息修改失败！');</script>";
                 }
             }
-            $this->renderPartial('Update', array("order_info" => $order_info));
+            $order_item_info = $order_model->findAllBySql($query);
+            $this->renderPartial('Update', array("order_info" => $order_info, 'order_item_info'=>$order_item_info));
         }
         else{
             echo "<script>alert('未找到该订单！');</script>";

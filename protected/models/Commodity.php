@@ -54,10 +54,11 @@ class Commodity extends CActiveRecord
 	{
 		return array(
 			array('comm_name','required','message'=>'商品名称必填'),
-			array('comm_name','unique','message'=>'商品名称已经登录'),
+//			array('comm_name','unique','message'=>'商品名称已经登录'),
 			array('comm_price','required','message'=>'商品价格必填'),
-			array('comm_price','match','pattern'=>'/^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/','message'=>'价格必须是非0数字'),
-			array('comm_discount','match','pattern'=>'/^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/','message'=>'折扣价格必须是非0数字'),
+//			array('comm_price','match','pattern'=>'/^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/','message'=>'价格必须是非0数字'),
+			array('comm_price,comm_discount','match','pattern'=>'/^[0-9]+(.[0-9]{2})?$/','message'=>'价格必须是非0数字'),
+//			array('comm_discount','match','pattern'=>'/^(([1-9]\d{0,9})|0)(\.\d{1,2})?$/','message'=>'折扣价格必须是非0数字'),
 			array('comm_intro1','required','message'=>'商品简介必填'),
 			array('comm_sort_order','match','pattern'=>'/^[1-9]\d*$/','message'=>'排序必须是非0数字'),
 			array('comm_kind,comm_intro2,comm_intro3,comm_intro4,comm_intro5,comm_is_hot,comm_is_show,comm_on_shelve_time,comm_off_shelve_time,comm_update_time,comm_check_times,','safe'),

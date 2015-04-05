@@ -26,7 +26,7 @@ class CommodityController extends Controller
 		return array(
 			array(
 				'allow',
-				'actions'=>array('addProduct','addService','delProduct','delService','showProduct','showService','updateProduct','updateService'),
+				'actions'=>array('addProduct','addService','delProduct','delService','showProduct','showService','updateProduct','updateService','ShowSale'),
 				'users'=>array('@'),
 			),
 			array(
@@ -45,29 +45,37 @@ class CommodityController extends Controller
 		//通过模型来实现数据表信息查询
 		//产生模型对象
 		$commodity_model = Commodity::model();
+		$query="select * from tbl_commodity where comm_kind<>8";
 
 		//判断Filter是否被用户选择了
 		if(isset($_POST["comm_is_show"])){
             if(($_POST["comm_is_show"]!=2)&&($_POST["comm_is_hot"]!=2)) {
-				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
-                                                                                'comm_is_show'=>$_POST["comm_is_show"],
-                                                                                'comm_is_hot'=>$_POST["comm_is_hot"]));
+	            $query = $query." and comm_is_show=".
+		            $_POST["comm_is_show"].
+		            " and comm_is_hot=".
+		            $_POST["comm_is_hot"];
+//				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
+//                                                                                'comm_is_show'=>$_POST["comm_is_show"],
+//                                                                                'comm_is_hot'=>$_POST["comm_is_hot"]));
 			}
 			elseif($_POST["comm_is_show"]!=2){
-                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
-                                                                                'comm_is_show'=>$_POST["comm_is_show"]));
+				$query = $query." and comm_is_show=".
+					$_POST["comm_is_show"];
+//                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
+//                                                                                'comm_is_show'=>$_POST["comm_is_show"]));
 			}
             elseif($_POST["comm_is_hot"]!=2){
-                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
-                                                                                'comm_is_hot'=>$_POST["comm_is_hot"]));
+	            $query = $query." and comm_is_hot=".
+		            $_POST["comm_is_hot"];
+//                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1",
+//                                                                                'comm_is_hot'=>$_POST["comm_is_hot"]));
 			}
-            else{
-                $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1"));
-            }
+			else{}
 		}
-        else{
-            $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1"));
-        }
+//        else{
+//            $commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"1"));
+//        }
+		$commodity_info = $commodity_model->findAllBySql($query);
 
 		//传递到视图
 		$this->renderPartial('showService',array('commodity_info'=>$commodity_info));
@@ -82,29 +90,37 @@ class CommodityController extends Controller
 		//通过模型来实现数据表信息查询
 		//产生模型对象
 		$commodity_model = Commodity::model();
+		$query="select * from tbl_commodity where comm_kind=8";
 
 		//判断Filter是否被用户选择了
 		if(isset($_POST["comm_is_show"])){
 			if(($_POST["comm_is_show"]!=2)&&($_POST["comm_is_hot"]!=2)) {
-				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2",
-					'comm_is_show'=>$_POST["comm_is_show"],
-					'comm_is_hot'=>$_POST["comm_is_hot"]));
+				$query = $query." and comm_is_show=".
+					$_POST["comm_is_show"].
+					" and comm_is_hot=".
+					$_POST["comm_is_hot"];
+//				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2",
+//					'comm_is_show'=>$_POST["comm_is_show"],
+//					'comm_is_hot'=>$_POST["comm_is_hot"]));
 			}
 			elseif($_POST["comm_is_show"]!=2){
-				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2",
-					'comm_is_show'=>$_POST["comm_is_show"]));
+				$query = $query." and comm_is_show=".
+					$_POST["comm_is_show"];
+//				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2",
+//					'comm_is_show'=>$_POST["comm_is_show"]));
 			}
 			elseif($_POST["comm_is_hot"]!=2){
-				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2",
-					'comm_is_hot'=>$_POST["comm_is_hot"]));
+				$query = $query." and comm_is_hot=".
+					$_POST["comm_is_hot"];
+//				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2",
+//					'comm_is_hot'=>$_POST["comm_is_hot"]));
 			}
-			else{
-				$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2"));
-			}
+			else{}
 		}
-		else{
-			$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2"));
-		}
+//		else{
+//			$commodity_info = $commodity_model->findAllByAttributes(array('comm_kind'=>"2"));
+//		}
+		$commodity_info = $commodity_model->findAllBySql($query);
 
 		//传递到视图
 		$this->renderPartial('showProduct',array('commodity_info'=>$commodity_info));
@@ -248,7 +264,7 @@ class CommodityController extends Controller
             $commodity_info->attributes = $_POST["Commodity"];
             $commodity_service_info->attributes = $_POST["Commodity_Service"];
 
-            $commodity_info->comm_kind = 1;
+//            $commodity_info->comm_kind = 1;
 
 			//修改时间
 			$commodity_info->comm_update_time = date("Y-m-d H:i:s",time());
@@ -275,6 +291,9 @@ class CommodityController extends Controller
 			else{
 				echo "<script>alert('".$_POST["Commodity"]["comm_name"]." 修改失败');</script>";
 			}
+//	        echo "<pre>";
+//	        print_r($commodity_info);
+//	        echo "</pre>";
 		}
 
 		$this->renderPartial('UpdateService',array("commodity_model"=>$commodity_info,
@@ -309,7 +328,7 @@ class CommodityController extends Controller
 			$commodity_info->attributes = $_POST["Commodity"];
 			$commodity_product_info->attributes = $_POST["Commodity_Product"];
 
-			$commodity_info->comm_kind = 2;
+//			$commodity_info->comm_kind = 2;
 
 			//修改时间
 			$commodity_info->comm_update_time = date("Y-m-d H:i:s",time());
@@ -398,5 +417,28 @@ class CommodityController extends Controller
 				echo "<script>alert('".$commodity_info->comm_name." 删除失败');</script>";
 			}
 		}
+	}
+
+	/**
+	 * 销售一览
+	 * @throws CException
+	 */
+	public function actionShowSale()
+	{
+		//通过模型来实现数据表信息查询
+		//产生模型对象
+		$commodity_model = Commodity::model();
+		$query='select * from tbl_commodity';
+
+		//判断Filter是否被用户选择了
+		if(isset($_POST["comm_kind"])){
+			if($_POST['comm_kind'] != 9999) {
+				$query = $query." where comm_kind=".$_POST["comm_kind"];
+			}
+		}
+		$commodity_info = $commodity_model->findAllBySql($query);
+
+		//传递到视图
+		$this->renderPartial('showSale',array('commodity_info'=>$commodity_info));
 	}
 }

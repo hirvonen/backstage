@@ -8,14 +8,14 @@
 
 <body>
 
-<div class="div_head">
-            <span>
-                <span style="float:left">当前位置是：预约管理-》预约视图</span>
-	            <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="./index.php?r=aptm/show">【返回】</a>
-                </span>
-            </span>
-</div>
+<!--<div class="div_head">-->
+<!--            <span>-->
+<!--                <span style="float:left">当前位置是：预约管理-》预约视图</span>-->
+<!--	            <span style="float:right;margin-right: 8px;font-weight: bold">-->
+<!--                    <a style="text-decoration: none" href="./index.php?r=aptm/show">【返回】</a>-->
+<!--                </span>-->
+<!--            </span>-->
+<!--</div>-->
 <div></div>
 <div>
 	<?php

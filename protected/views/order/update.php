@@ -103,19 +103,136 @@
                 ?>
             </td>
         </tr>
-        <tr bgcolor="#add8e6">
-            <td>
-                <?php echo $form->label($order_info, 'ord_upt_time'); ?>
+        <tr>
+            <td bgcolor="#6495ed">
             </td>
-            <td>
-                <?php echo $order_info->ord_upt_time; ?>
+            <td bgcolor="#6495ed">
             </td>
         </tr>
-		<tr>
-			<td colspan="2" align="center">
-				<input type="submit" value="修改">
-			</td>
-		</tr>
+<!--        <tr bgcolor="#add8e6">-->
+<!--            <td>-->
+<!--                --><?php //echo $form->label($order_info, 'ord_total_discount'); ?>
+<!--            </td>-->
+<!--            <td>-->
+<!--                --><?php //echo $form->textField($order_info, 'ord_total_discount'); ?>
+<!--            </td>-->
+<!--        </tr>-->
+        <tr bgcolor="#ffffff">
+            <td>
+                <?php echo $form->label($order_info, 'ord_deductible'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_deductible'); ?>
+            </td>
+        </tr>
+        <tr bgcolor="#add8e6">
+            <td>
+                <?php echo $form->label($order_info, 'ord_downpay'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_downpay'); ?>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td>
+                <?php echo $form->label($order_info, 'ord_downpay_deductible'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_downpay_deductible'); ?>
+            </td>
+        </tr>
+        <tr bgcolor="#add8e6">
+            <td>
+                <?php echo $form->label($order_info, 'ord_paid_money'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_paid_money'); ?>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td>
+                <?php echo $form->label($order_info, 'ord_paid_net'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_paid_net'); ?>
+            </td>
+        </tr>
+        <tr bgcolor="#add8e6">
+            <td>
+                <?php echo $form->label($order_info, 'ord_paid_balance'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_paid_balance'); ?>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td>
+                <?php echo $form->label($order_info, 'ord_coupon'); ?>
+            </td>
+            <td>
+                <?php echo $form->textField($order_info, 'ord_coupon'); ?>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#6495ed">
+            </td>
+            <td bgcolor="#6495ed">
+            </td>
+        </tr>
+        <?php
+        $index = 0;
+        $comm_model = Commodity::model();
+        foreach ($order_item_info as $order_item_single) {
+            echo '<tr>'.
+                '<td bgcolor="add8e6">'.'订单商品'.($index+1).'</td>'.
+                '<td>'.
+                    "<a style='text-decoration: none' href='./index.php?r=order/update&id=".
+                        $order_info->pk_ord_id.
+                        "&ordItmID=".
+                        $order_item_single->pk_ord_itm_id.
+                        "'>删除</a>".
+                '</td>'.
+                '</tr>';
+            $query = 'select * from tbl_commodity where pk_comm_id = '.$order_item_single->ord_item_comm_id;
+            $comm_info = $comm_model->findBySql($query);
+            echo '<tr>'.
+                '<td>'.
+                $form->label($comm_info, 'comm_name').
+                '</td>'.
+                '<td>'.
+                $comm_info->comm_name.
+                '</td>'.
+                '</tr>';
+            echo '<tr>'.
+                '<td>'.
+                $form->label($order_item_single, 'ord_item_num').
+                '</td>'.
+                '<td>'.
+                $form->textField($order_item_single, 'ord_item_num').
+                '</td>'.
+                '</tr>';
+            echo '<tr>'.
+                '<td>'.
+                $form->label($order_item_single, 'ord_item_price').
+                '</td>'.
+                '<td>'.
+                $order_item_single->ord_item_price.
+                '</td>'.
+                '</tr>';
+            $index++;
+        }
+        ?>
+        <tr>
+            <td bgcolor="#6495ed">
+            </td>
+            <td bgcolor="#6495ed">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="修改">
+            </td>
+        </tr>
 	</table>
 	<?php $this->endWidget(); ?>
 </div>

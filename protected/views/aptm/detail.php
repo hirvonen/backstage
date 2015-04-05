@@ -40,6 +40,17 @@
 	foreach($beau_info as $_beau_v){
 		$beau_options["$_beau_v->pk_beau_id"] = "$_beau_v->beau_realname";
 	}
+
+	//商品名称及时间数据准备
+	$ord_item_model = Order_Item::model();
+	$ord_item_info = $ord_item_model->findByPk($aptm_info->aptm_ord_item_id);
+	if(isset($ord_item_info)) {
+		$comm_model = Commodity::model();
+		$comm_info = $comm_model->findByPk($ord_item_info->ord_item_comm_id);
+
+		$comm_serv_model = Commodity_Service::model();
+		$comm_serv_info = $comm_serv_model->findByPk($ord_item_info->ord_item_comm_id);
+	}
 	?>
 	<?php $form = $this->beginWidget('CActiveForm'); ?>
 	<table border="1" width="100%" class="table_a">
@@ -68,34 +79,51 @@
 		</tr>
 		<tr bgcolor="#add8e6">
 			<td>
+				<?php echo $form->label($aptm_info, 'aptm_ord_item_id'); ?>
+			</td>
+			<td>
+				<?php
+				if(isset($comm_info)) {
+					echo $comm_info->comm_name;
+				}
+				else {
+					echo $aptm_info->aptm_ord_item_id;
+				}
+				//				echo $form->textField($aptm_info, 'aptm_ord_item_id');
+				?>
+			</td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td>
 				<?php echo $form->label($aptm_info, 'aptm_time'); ?>
 			</td>
 			<td>
 				<?php echo $form->textField($aptm_info, 'aptm_time'); ?>
 			</td>
 		</tr>
-		<tr bgcolor="#ffffff">
-			<td>
-				<?php echo $form->label($aptm_info, 'aptm_ord_item_id'); ?>
-			</td>
+		<tr bgcolor="#add8e6">
+			<td>服务时长(分钟)</td>
 			<td>
 				<?php
-				$ord_item_model = Order_Item::model();
-				$ord_item_info = $ord_item_model->findByPk($aptm_info->aptm_ord_item_id);
-				if(isset($ord_item_info)) {
-					$comm_model = Commodity::model();
-					$comm_info = $comm_model->findByPk($ord_item_info->ord_item_comm_id);
-					if(isset($comm_info)) {
-						echo $comm_info->comm_name;
-					}
-					else {
-						echo $aptm_info->aptm_ord_item_id;
-					}
+				if(isset($comm_serv_info)) {
+					echo $comm_serv_info->serv_duration;
 				}
 				else {
 					echo $aptm_info->aptm_ord_item_id;
 				}
-//				echo $form->textField($aptm_info, 'aptm_ord_item_id');
+				?>
+			</td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td>预计结束时间</td>
+			<td>
+				<?php
+				if(isset($comm_serv_info)) {
+					echo date("Y-m-d H:i:s",strtotime("$aptm_info->aptm_time +$comm_serv_info->serv_duration minute"));
+				}
+				else {
+					echo $aptm_info->aptm_ord_item_id;
+				}
 				?>
 			</td>
 		</tr>
@@ -117,7 +145,11 @@
 																				'预约取消',
 																				'等待评价',
 																				'预约完成')); ?>
-			</td></tr><tr bgcolor="#ffffff"><td><?php echo $form->label($aptm_info, 'aptm_course_no'); ?>
+			</td>
+		</tr>
+		<tr bgcolor="#ffffff">
+			<td>
+				<?php echo $form->label($aptm_info, 'aptm_course_no'); ?>
 			</td>
 			<td>
 				<?php echo $form->textField($aptm_info, 'aptm_course_no'); ?>

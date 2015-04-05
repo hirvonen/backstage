@@ -41,39 +41,64 @@
 //            )
 //        ));?>
 <!--    </div></pre>-->
+
 <div class="div_search">
             <span>
                 <?php $form = $this->beginWidget('CActiveForm'); ?>
                 <?php
                 if(isset($_POST["aptm_status"])) {
                     $select_status = $_POST["aptm_status"];
+                    $select_beau = $_POST["aptm_beau_id"];
                 }
                 else {
                     $select_status = 0;
+                    $select_beau = 0;
                 }
                 ?>
-                订单状态<select name="aptm_status" style="width: 100px;">
+                预约状态<select name="aptm_status" style="width: 100px;">
                     <option <?php
-                    if( $select_status == 0 ) echo " selected="."'"."selected"."' ";
+//                    if( $select_status == 0 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 0 ) echo " selected='selected' ";
                     ?> value="0">全部</option>
                     <option <?php
-                    if( $select_status == 1 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 1 ) echo " selected='selected' ";
                     ?> value="1">等待付款</option>
                     <option <?php
-                    if( $select_status == 2 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 2 ) echo " selected='selected' ";
                     ?> value="2">等待确认</option>
                     <option <?php
-                    if( $select_status == 3 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 3 ) echo " selected='selected' ";
                     ?> value="3">等待服务</option>
                     <option <?php
-                    if( $select_status == 4 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 4 ) echo " selected='selected' ";
                     ?> value="4">预约取消</option>
                     <option <?php
-                    if( $select_status == 5 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 5 ) echo " selected='selected' ";
                     ?> value="5">等待评价</option>
                     <option <?php
-                    if( $select_status == 6 ) echo " selected="."'"."selected"."' ";
+                    if( $select_status == 6 ) echo " selected='selected' ";
                     ?> value="6">评价完毕</option>
+                </select>
+                理疗师<select name="aptm_beau_id" style="width: 100px;">
+                    <?php
+                    echo '<option';
+                    if($select_beau == 0){
+                        echo " selected='selected'";
+                    }
+                    echo " value='0'>未选择</option>";
+
+                    //构建dropDownList的option用的数组
+                    foreach($beau_info as $key=>$_beau_v){
+                        echo '<option';
+
+                        if($select_beau == $_beau_v->pk_beau_id){
+                            echo " selected='selected'";
+                        }
+                        echo " value='".$_beau_v->pk_beau_id."'>";
+                        echo $_beau_v->beau_realname;
+                        echo '</option>';
+                    }
+                    ?>
                 </select>
 	                <input value="查询" type="submit" />
                 <?php $this->endWidget(); ?>
@@ -94,16 +119,7 @@
         <?php $form = $this->beginWidget('CActiveForm'); ?>
 		<?php
         $i = 0;
-
-        //理疗师姓名查找用数据准备
         $beau_model = Beautician::model();
-        $query = "select * from tbl_beautician";
-        $beau_info = $beau_model->findAllBySql($query);
-        //构建dropDownList的option用的数组
-        $beau_options = array();
-        foreach($beau_info as $_beau_v){
-            $beau_options["$_beau_v->pk_beau_id"] = "$_beau_v->beau_realname";
-        }
 
 		foreach ($aptm_info as $_v) {
 			?>

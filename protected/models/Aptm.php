@@ -29,7 +29,7 @@ class Aptm extends CActiveRecord
 	{
 		return array(
 			'pk_aptm_id'=>'预约单号',
-			'aptm_beau_id'=>'美容师',
+			'aptm_beau_id'=>'理疗师',
 			'aptm_time'=>'预约时间',
 			'aptm_ord_item_id'=>'预约项目名',
 			'aptm_status'=>'预约状态',

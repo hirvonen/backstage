@@ -77,11 +77,11 @@
 			<td>下架时间</td>
 			<td>变更时间</td>
 			<td>点击次数</td>
-			<td>介绍1</td>
-			<td>介绍2</td>
-			<td>介绍3</td>
-			<td>介绍4</td>
-			<td>介绍5</td>
+<!--			<td>介绍1</td>-->
+<!--			<td>介绍2</td>-->
+<!--			<td>介绍3</td>-->
+<!--			<td>介绍4</td>-->
+<!--			<td>介绍5</td>-->
 			<td>热门</td>
 			<td>是否显示</td>
 			<td>排序</td>
@@ -99,45 +99,62 @@
                 }
                 ?>
                 id="product1">
-				<td><a href="./index.php?r=commodity/updateService&id=<?php echo $_v->pk_comm_id ?>">修改</a></td>
+				<td><a href="./index.php?r=commodity/updateService&id=<?php echo $_v->pk_comm_id ?>">详细</a></td>
 				<td><?php echo $_v->pk_comm_id ?></td>
 				<td><?php
-					if($_v->comm_kind == 1) {
-						echo "服务";
+					switch($_v->comm_kind) {
+						case 0:
+							echo "这是啥种别？";
+							break;
+						case 1:
+							echo "单次服务";
+							break;
+						case 2:
+							echo "套餐/疗程";
+							break;
+						case 3:
+							echo "充值卡";
+							break;
+						case 4:
+							echo "这又是啥种别？";
+							break;
+						case 8:
+							echo "会员卡";
+							break;
+						default:
+							echo "未知";
+							break;
 					}
-					else{
-						echo "商品";
-					}
-					?></a></td>
-				<td><a href="#"><?php echo $_v->comm_name; ?></a></td>
-				<td><?php echo $_v->comm_price; ?></a></td>
-				<td><?php echo $_v->comm_discount; ?></a></td>
-				<td><?php echo $_v->comm_on_shelve_time; ?></a></td>
-				<td><?php echo $_v->comm_off_shelve_time; ?></a></td>
-				<td><?php echo $_v->comm_update_time; ?></a></td>
-				<td><?php echo $_v->comm_check_times; ?></a></td>
-				<td><?php echo $_v->comm_intro1; ?></a></td>
-				<td><?php echo $_v->comm_intro2; ?></a></td>
-				<td><?php echo $_v->comm_intro3; ?></a></td>
-				<td><?php echo $_v->comm_intro4; ?></a></td>
-				<td><?php echo $_v->comm_intro5; ?></a></td>
+					?></td>
+				<td><?php echo $_v->comm_name; ?></td>
+				<td><?php echo $_v->comm_price; ?></td>
+				<td><?php echo $_v->comm_discount; ?></td>
+				<td><?php echo $_v->comm_on_shelve_time; ?></td>
+				<td><?php echo $_v->comm_off_shelve_time; ?></td>
+				<td><?php echo $_v->comm_update_time; ?></td>
+				<td><?php echo $_v->comm_check_times; ?></td>
+<!--				<td>--><?php //echo $_v->comm_intro1; ?><!--</a></td>-->
+<!--				<td>--><?php //echo $_v->comm_intro2; ?><!--</a></td>-->
+<!--				<td>--><?php //echo $_v->comm_intro3; ?><!--</a></td>-->
+<!--				<td>--><?php //echo $_v->comm_intro4; ?><!--</a></td>-->
+<!--				<td>--><?php //echo $_v->comm_intro5; ?><!--</a></td>-->
 				<td><?php
 						if($_v->comm_is_hot == 1) {
-							echo "是";
+							echo "热门";
 						}
 						else{
-							echo "否";
+							echo "非热门";
 						}
-					?></a></td>
+					?></td>
 				<td><?php
 						if($_v->comm_is_show == 1) {
-							echo "是";
+							echo "显示";
 						}
 						else{
-							echo "否";
+							echo "隐藏";
 						}
-					?></a></td>
-				<td><?php echo $_v->comm_sort_order; ?></a></td>
+					?></td>
+				<td><?php echo $_v->comm_sort_order; ?></td>
 				<td>
 					<script language="javascript">
 						function delcfm() {
