@@ -27,7 +27,12 @@ class UserController extends Controller
 			array(
 				'allow',
 				'actions'=>array('del','detail','initPassword','logout','show','chgpwd','update','add_step1','add_step2'),
-				'users'=>array('@'),
+				'users'=>array('superadmin'),
+			),
+			array(
+				'allow',
+				'actions'=>array('detail','logout','show','chgpwd','update'),
+				'users'=>array('admin'),
 			),
 			array(
 				'allow',

@@ -27,13 +27,8 @@ class OrderController extends Controller
 			array(
 				'allow',
 				'actions'=>array('show','detail','update','add'),
-				'users'=>array('@'),
+				'users'=>array('superadmin','admin'),
 			),
-//			array(
-//				'allow',
-//				'actions'=>array('login'),
-//				'users'=>array('*'),
-//			),
 			array(
 				'deny',
 				'users'=>array('*'),

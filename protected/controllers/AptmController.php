@@ -27,13 +27,8 @@ class AptmController extends Controller
 			array(
 				'allow',
 				'actions'=>array('show','cal','detail'),
-				'users'=>array('@'),
+				'users'=>array('superadmin','admin'),
 			),
-//			array(
-//				'allow',
-//				'actions'=>array('login'),
-//				'users'=>array('*'),
-//			),
 			array(
 				'deny',
 				'users'=>array('*'),

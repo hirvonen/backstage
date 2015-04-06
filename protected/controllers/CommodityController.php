@@ -27,7 +27,12 @@ class CommodityController extends Controller
 			array(
 				'allow',
 				'actions'=>array('addProduct','addService','delProduct','delService','showProduct','showService','updateProduct','updateService','ShowSale'),
-				'users'=>array('@'),
+				'users'=>array('superadmin'),
+			),
+			array(
+				'allow',
+				'actions'=>array('addProduct','addService','showProduct','showService','updateProduct','updateService','ShowSale'),
+				'users'=>array('admin'),
 			),
 			array(
 				'deny',
